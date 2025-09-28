@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>सभागृह बैठकांचे छायाचित्र — ग्रामपंचायत</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .gallery-section {
+      padding: 3rem 1rem;
+      background: #fff;
+    }
+    .gallery-section h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+    .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* always 3 per row */
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px; /* slightly taller for balance */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 2.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Video Section */
+    .video-section {
+      padding: 3rem 1rem;
+      background: #f9f9f9;
+    }
+    .video-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .video-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .video-thumb {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      overflow: hidden;
+    }
+    .video-thumb img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      color: #fff;
+      background: rgba(0,0,0,0.7);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s ease;
+    }
+    .play-btn:hover {
+      background: rgba(0,0,0,0.9);
+    }
+    .video-title {
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #34495e;
+      background: #ecf0f1;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Video Modal */
+    .video-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 3000;
+    }
+    .video-modal-content {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+    .video-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .video-grid-vertical {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1500px;
+  margin: 0 auto 2.5rem auto;
+}
+.video-vertical-card {
+  background: linear-gradient(135deg, #eafaf1 60%, #d4efdf 100%);
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(44,62,80,0.13);
+  padding: 2rem 1.2rem 2.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 540px;
+  min-width: 370px;
+  max-width: 420px;
+}
+.video-vertical-card video {
+  width: 100%;
+  max-width: 340px;
+  min-height: 520px;
+  aspect-ratio: 9/16;
+  background: #000;
+  border-radius: 18px;
+  margin-bottom: 1.2rem;
+}
+.video-caption {
+  color: #145a32;
+  font-size: 1.18rem;
+  font-weight: 600;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .video-grid-vertical {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .video-grid-vertical {
+    grid-template-columns: 1fr;
+  }
+  .video-vertical-card {
+    min-width: 0;
+    max-width: 100%;
+    min-height: 0;
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+  }
+  .video-vertical-card video {
+    max-width: 100%;
+    min-height: 320px;
+  }
+}
+
+.gp-footer {
+  background: #0f1419; /* Changed to match navbar background */
+  color: #fff;
+  margin-top: 2.5rem;
+  font-family: 'Noto Sans', Arial, sans-serif;
+}
+.gp-footer-main {
+  padding: 2.2rem 0 1.2rem 0;
+}
+.gp-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+.gp-footer-columns {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.gp-footer-col {
+  min-width: 200px;
+  flex: 1 1 220px;
+}
+.gp-footer-col h3 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  color: #f7ca18;
+  letter-spacing: 1px;
+}
+.gp-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gp-footer-col ul li {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+.gp-footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.gp-footer-col ul li a:hover {
+  color: #f7ca18;
+  text-decoration: underline;
+}
+.gp-footer-bottom {
+  background: #10451d; /* Slightly darker for bottom strip */
+  padding: 0.7rem 0;
+  text-align: center;
+  font-size: 0.98rem;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 800px) {
+  .gp-footer-columns {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- ✅ keep your utility bar + gov header + nav from index.html -->
+  <header class="gov-header">
+    <div class="container gov-header-inner">
+      <div class="gov-emblem">
+        <img src="https://panchayat.gov.in/wp-content/themes/sdo-theme/images/emblem.svg" alt="Emblem" width="90" height="90">
+      </div>
+      <div class="gov-title">
+        <h1 class="title-hindi">पंचायती राज मंत्रालय</h1>
+        <h2 class="title-english">Ministry of Panchayati Raj</h2>
+        <p class="title-subtitle">Government of India</p>
+      </div>
+      <div class="gov-logos">
+        <img src="../images/swachh-bharat-logo.svg" alt="Swachh Bharat" width="55">
+        <img src="../images/g20-india-logo.svg" alt="G20 India" width="55">
+        <img src="../images/digital-india-logo.svg" alt="Digital India" width="55">
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="mopr-nav">
+    <div class="nav-inner">
+      <ul class="nav-menu">
+        <li><a href="../index.html">HOME</a></li>
+        <li class="nav-item has-dropdown">
+          <button class="nav-link dropdown-toggle">ग्रामपंचायत छायाचित्रे ▼</button>
+          <ul class="dropdown-menu">
+            <li><a href="ON-BOARDMEETINGS.html">सभागृह बैठकांचे छायाचित्र</a></li>
+            <li><a href="SAMRUDH-MEETING.html">मुख्यमंत्री समृद्ध पंचायत अभियान</a></li>
+            <li><a href="#">सत्कार समारंभ छायाचित्रे</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Gallery -->
+  <main id="main">
+    <section class="gallery-section">
+      <h1>सभागृह बैठकांचे छायाचित्र</h1>
+      <div class="gallery-grid" id="gallery"></div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" style="margin-top:2.5rem;">
+  <h2 style="text-align:center; color:#1a4d2e; margin-bottom:1.5rem;">सभागृह बैठकीचे व्हिडिओ</h2>
+  <div class="video-grid-vertical">
+    <!-- Video 1 -->
+    <div class="video-vertical-card">
+      <video 
+        src="../GRAM-MEETING-IMAGES/VID-20250904-WA0004.mp4" 
+        controls 
+        playsinline
+        style="width:100%; aspect-ratio:9/16; background:#000; border-radius:14px; box-shadow:0 2px 18px rgba(44,62,80,0.13);"
+      >
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">सभागृह बैठक – सप्टेंबर २०२५</div>
+    </div>
+    <!-- Video 2 -->
+    <div class="video-vertical-card">
+      <video 
+        src="../GRAM-MEETING-IMAGES/VID-20250904-WA0002.mp4" 
+        controls 
+        playsinline
+        style="width:100%; aspect-ratio:9/16; background:#000; border-radius:14px; box-shadow:0 2px 18px rgba(44,62,80,0.13);"
+      >
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">महत्वाचा निर्णय – ऑगस्ट २०२५</div>
+    </div>
+    <!-- Video 3 -->
+    <div class="video-vertical-card">
+      <video 
+        src="../GRAM-MEETING-IMAGES/VID-20250904-WA0003.mp4" 
+        controls 
+        playsinline
+        style="width:100%; aspect-ratio:9/16; background:#000; border-radius:14px; box-shadow:0 2px 18px rgba(44,62,80,0.13);"
+      >
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">ग्रामसभा चर्चासत्र</div>
+    </div>
+  </div>
+  <!-- Second row of videos -->
+  <div class="video-grid-vertical" style="margin-top:2.5rem;">
+    <!-- Video 4 -->
+    <div class="video-vertical-card">
+      <video 
+        src="../GRAM-MEETING-IMAGES/VID-20250904-WA0001.mp4" 
+        controls 
+        playsinline
+        style="width:100%; aspect-ratio:9/16; background:#000; border-radius:14px; box-shadow:0 2px 18px rgba(44,62,80,0.13);"
+      >
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">विशेष सभा – जुलै २०२५</div>
+    </div>
+    <!-- Video 5 -->
+    <div class="video-vertical-card">
+      <video 
+        src="../GRAM-MEETING-IMAGES/VID-20250904-WA0005.mp4" 
+        controls 
+        playsinline
+        style="width:100%; aspect-ratio:9/16; background:#000; border-radius:14px; box-shadow:0 2px 18px rgba(44,62,80,0.13);"
+      >
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">सामान्य सभा – जून २०२५</div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <!-- Lightbox container (dynamic) -->
+  <div id="lightbox" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="" alt="Preview" id="lightbox-img">
+  </div>
+
+  <!-- Video Modal -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+      <span class="video-modal-close" onclick="closeVideoModal()">&times;</span>
+      <video id="videoPlayer" controls style="width:100%;max-height:60vh;border-radius:12px;background:#000;">
+        <source id="videoSource" src="" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    // Dynamically generate gallery from IMG-20250904-WA0014 to WA0025
+    const gallery = document.getElementById("gallery");
+    const start = 14, end = 25; // WA0014 -> WA0025
+    for (let i = start; i <= end; i++) {
+      const imgName = `IMG-20250904-WA00${i}.jpg`;
+      const imgPath = `../GRAM-MEETING-IMAGES/${imgName}`;
+      const img = document.createElement("img");
+      img.src = imgPath;
+      img.alt = `सभागृह बैठक ${i - start + 1}`;
+      img.addEventListener("click", () => {
+        document.getElementById("lightbox").style.display = "flex";
+        document.getElementById("lightbox-img").src = imgPath;
+      });
+      gallery.appendChild(img);
+    }
+
+    // Close lightbox on click
+    document.querySelector(".lightbox .close").addEventListener("click", () => {
+      document.getElementById("lightbox").style.display = "none";
+    });
+
+    // Video modal functions
+    function openVideoModal(path) {
+      const modal = document.getElementById('videoModal');
+      const player = document.getElementById('videoPlayer');
+      const source = document.getElementById('videoSource');
+      source.src = path;
+      player.load();
+      modal.style.display = "flex";
+      player.play();
+    }
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const player = document.getElementById('videoPlayer');
+      player.pause();
+      player.currentTime = 0;
+      modal.style.display = "none";
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") closeVideoModal();
+    });
+  </script>
+
+  <script src="../script.js"></script>
+
+  <footer class="gp-footer">
+  <div class="gp-footer-main">
+    <div class="gp-footer-container">
+      <div class="gp-footer-columns">
+        <div class="gp-footer-col">
+          <h3>ग्रामपंचायत माहिती</h3>
+          <ul>
+            <li><a href="#">मुख्य पृष्ठ</a></li>
+            <li><a href="#">संपर्क</a></li>
+            <li><a href="#">ग्रामसभा</a></li>
+            <li><a href="#">योजना</a></li>
+          </ul>
+        </div>
+        <div class="gp-footer-col">
+          <h3>महत्वाचे दुवे</h3>
+          <ul>
+            <li><a href="#">महत्वाचे दस्तावेज</a></li>
+            <li><a href="#">फॉर्म्स</a></li>
+            <li><a href="#">परिपत्रके</a></li>
+          </ul>
+        </div>
+        <div class="gp-footer-col">
+          <h3>संपर्क</h3>
+          <ul>
+            <li>फोन: ०१२३४-५६७८९०</li>
+            <li>ईमेल: grampanchayat@email.com</li>
+            <li>पत्ता: [गाव, तालुका, जिल्हा]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gp-footer-bottom">
+    <div class="gp-footer-container">
+      <p>© <span id="gp-year"></span> आपल्या ग्रामपंचायत. सर्व हक्क राखीव.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Set current year in footer
+  document.addEventListener('DOMContentLoaded', function() {
+    var y = document.getElementById('gp-year');
+    if(y) y.textContent = new Date().getFullYear();
+  });
+</script>
+</body>
+</html>

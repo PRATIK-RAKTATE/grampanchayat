@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="mr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>सत्कार समारंभ छायाचित्रे</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      /* 🔥 Gallery Page Styles */
+      .gallery-container {
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      .gallery-container h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        color: #2c3e50;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 per row */
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .gallery-grid img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .gallery-grid img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      }
+
+      /* Lightbox */
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        padding-top: 5rem;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+      }
+      .lightbox-content {
+        margin: auto;
+        display: block;
+        max-width: 85%;
+        max-height: 80%;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      }
+      .lightbox:target {
+        display: block;
+      }
+      .close-lightbox {
+        position: absolute;
+        top: 25px;
+        right: 45px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .close-lightbox:hover {
+        color: #f1c40f;
+      }
+    </style>
+  </head>
+  <body>
+   <header class="gov-header">
+    <div class="container gov-header-inner">
+      <div class="gov-emblem">
+        <img src="https://panchayat.gov.in/wp-content/themes/sdo-theme/images/emblem.svg" alt="Emblem" width="90" height="90">
+      </div>
+      <div class="gov-title">
+        <h1 class="title-hindi">पंचायती राज मंत्रालय</h1>
+        <h2 class="title-english">Ministry of Panchayati Raj</h2>
+        <p class="title-subtitle">Government of India</p>
+      </div>
+      <div class="gov-logos">
+        <img src="../images/swachh-bharat-logo.svg" alt="Swachh Bharat" width="55">
+        <img src="../images/g20-india-logo.svg" alt="G20 India" width="55">
+        <img src="../images/digital-india-logo.svg" alt="Digital India" width="55">
+      </div>
+    </div>
+  </header>
+
+
+    <!-- Navigation -->
+       <nav class="mopr-nav">
+    <div class="nav-inner">
+      <ul class="nav-menu">
+        <li><a href="../index.html">HOME</a></li>
+        <li class="nav-item has-dropdown">
+          <button class="nav-link dropdown-toggle">ग्रामपंचायत छायाचित्रे ▼</button>
+          <ul class="dropdown-menu">
+            <li><a href="ON-BOARDMEETINGS.html">सभागृह बैठकांचे छायाचित्र</a></li>
+            <li><a href="SAMRUDH-MEETING.html">मुख्यमंत्री समृद्ध पंचायत अभियान</a></li>
+            <li><a href="FALICITATION.html">सत्कार समारंभ छायाचित्रे</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+
+    <!-- 📸 Gallery Section -->
+    <main>
+      <section class="gallery-container">
+        <h2>सत्कार समारंभ छायाचित्रे</h2>
+        <div class="gallery-grid">
+          <!-- Images with explicit folder path -->
+          <a href="#img1"><img src="../FALISITATION-IMAGES/IMG-20250904-WA0032.jpg" alt="Felicitation Image 1"></a>
+          <a href="#img2"><img src="../FALISITATION-IMAGES/IMG-20250904-WA0033.jpg" alt="Felicitation Image 2"></a>
+          <a href="#img3"><img src="../FALISITATION-IMAGES/IMG-20250904-WA0034.jpg" alt="Felicitation Image 3"></a>
+          <a href="#img4"><img src="../FALISITATION-IMAGES/IMG-20250904-WA0035.jpg" alt="Felicitation Image 4"></a>
+          <a href="#img5"><img src="../FALISITATION-IMAGES/IMG-20250904-WA0036.jpg" alt="Felicitation Image 5"></a>
+          <a href="#img6"><img src="../FALISITATION-IMAGES/IMG-20250904-WA0037.jpg" alt="Felicitation Image 6"></a>
+          <a href="#img7"><img src="../FALISITATION-IMAGES/IMG-20250904-WA0038.jpg" alt="Felicitation Image 7"></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- 🔎 Lightbox -->
+    <div id="img1" class="lightbox">
+      <a href="#" class="close-lightbox">&times;</a>
+      <img src="../FALISITATION-IMAGES/IMG-20250904-WA0032.jpg" class="lightbox-content" alt="">
+    </div>
+    <div id="img2" class="lightbox">
+      <a href="#" class="close-lightbox">&times;</a>
+      <img src="../FALISITATION-IMAGES/IMG-20250904-WA0033.jpg" class="lightbox-content" alt="">
+    </div>
+    <div id="img3" class="lightbox">
+      <a href="#" class="close-lightbox">&times;</a>
+      <img src="../FALISITATION-IMAGES/IMG-20250904-WA0034.jpg" class="lightbox-content" alt="">
+    </div>
+    <div id="img4" class="lightbox">
+      <a href="#" class="close-lightbox">&times;</a>
+      <img src="../FALISITATION-IMAGES/IMG-20250904-WA0035.jpg" class="lightbox-content" alt="">
+    </div>
+    <div id="img5" class="lightbox">
+      <a href="#" class="close-lightbox">&times;</a>
+      <img src="../FALISITATION-IMAGES/IMG-20250904-WA0036.jpg" class="lightbox-content" alt="">
+    </div>
+    <div id="img6" class="lightbox">
+      <a href="#" class="close-lightbox">&times;</a>
+      <img src="../FALISITATION-IMAGES/IMG-20250904-WA0037.jpg" class="lightbox-content" alt="">
+    </div>
+    <div id="img7" class="lightbox">
+      <a href="#" class="close-lightbox">&times;</a>
+      <img src="../FALISITATION-IMAGES/IMG-20250904-WA0038.jpg" class="lightbox-content" alt="">
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

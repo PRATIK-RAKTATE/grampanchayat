@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मुख्यमंत्री समृद्ध पंचायत अभियान – गाओन यात्रा</title>
+  <link rel="stylesheet" href="../../styles.css">
+   <!-- your existing global css -->
+  <style>
+    /* ===== Page Specific Styling ===== */
+    body { background:#f9f9f9; }
+
+    .section-title {
+      text-align:center;
+      font-size:2rem;
+      margin:2rem 0 1rem;
+      color:#333;
+    }
+
+    /* Featured images/videos with description */
+    .featured-grid {
+      display:grid;
+      gap:1.5rem;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      margin:1.5rem auto;
+      max-width:1200px;
+      padding:0 1rem;
+    }
+    .featured-item {
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      overflow:hidden;
+      transition:transform 0.3s;
+    }
+    .featured-item:hover { transform:translateY(-4px); }
+    .featured-item img,
+    .featured-item video {
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+    .featured-info {
+      padding:1rem;
+      text-align:center;
+    }
+    .featured-info h4 {
+      margin-bottom:0.5rem;
+      font-size:1.2rem;
+      color:#222;
+    }
+    .featured-info p {
+      font-size:0.95rem;
+      color:#555;
+      line-height:1.4;
+    }
+
+    /* Remaining gallery */
+    .gallery-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:12px;
+      max-width:1200px;
+      margin:2rem auto;
+      padding:0 1rem;
+    }
+    .gallery-grid img,
+    .gallery-grid video {
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:10px;
+      cursor:pointer;
+      box-shadow:0 3px 8px rgba(0,0,0,0.1);
+      transition:transform 0.3s;
+    }
+    .gallery-grid img:hover,
+    .gallery-grid video:hover {
+      transform:scale(1.02);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.8);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:9999;
+    }
+    .lightbox img, .lightbox video {
+      max-width:90%;
+      max-height:90%;
+      border-radius:10px;
+      background:#000;
+    }
+    .lightbox.active { display:flex; }
+    .lightbox-close {
+      position:absolute;
+      top:20px;
+      right:30px;
+      font-size:2rem;
+      color:#fff;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    @media (max-width:768px){
+      .featured-item img, .featured-item video { height:180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+   <header class="gov-header" role="banner">
+      <div class="container gov-header-inner">
+        <!-- Left: Government Emblem -->
+        <div class="gov-emblem">
+          <img
+            src="https://panchayat.gov.in/wp-content/themes/sdo-theme/images/emblem.svg"
+            alt="Government of India National Emblem - सत्यमेव जयते (Truth Alone Triumphs)"
+            class="emblem-img"
+            loading="eager"
+            width="90"
+            height="90"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+
+        <!-- Center: Ministry Title -->
+        <div class="gov-title">
+          <h1 class="title-hindi">पंचायती राज मंत्रालय</h1>
+          <h2 class="title-english">Ministry of Panchayati Raj</h2>
+          <p class="title-subtitle">Government of India</p>
+        </div>
+
+        <!-- Right: Official Logos -->
+        <div
+          class="gov-logos"
+          role="group"
+          aria-label="Government Initiative Logos"
+        >
+          <img
+            src="../../images/swachh-bharat-logo.svg"
+            alt="Swachh Bharat Mission - Clean India Campaign Logo"
+            class="logo-img"
+            loading="eager"
+            width="55"
+            height="55"
+            decoding="async"
+            tabindex="0"
+            role="button"
+            aria-describedby="swachh-desc"
+          />
+          <span id="swachh-desc" class="sr-only"
+            >Link to Swachh Bharat Mission information</span
+          >
+          <img
+            src="../../images/g20-india-logo.svg"
+            alt="G20 India 2023 Presidency Logo"
+            class="logo-img"
+            loading="eager"
+            width="55"
+            height="55"
+            decoding="async"
+            tabindex="0"
+            role="button"
+            aria-describedby="g20-desc"
+          />
+          <span id="g20-desc" class="sr-only"
+            >Link to G20 India presidency information</span
+          >
+          <img
+            src="../../images/digital-india-logo.svg"
+            alt="Digital India Initiative Logo"
+            class="logo-img"
+            loading="eager"
+            width="55"
+            height="55"
+            decoding="async"
+            tabindex="0"
+            role="button"
+            aria-describedby="digital-desc"
+          />
+          <span id="digital-desc" class="sr-only"
+            >Link to Digital India initiative information</span
+          >
+        </div>
+      </div>
+    </header>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="mopr-nav">
+    <div class="nav-inner">
+      <ul class="nav-menu">
+        <li><a href="../../index.html">HOME</a></li>
+        <li class="nav-item has-dropdown">
+          <button class="nav-link dropdown-toggle">📑  मुख्यमंत्री समृद्ध पंचायत अभियान ▼</button>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">पंचायत अभियान CHAYACHITRA</a></li>
+            <li><a href="#">विद्युत योजना</a></li>
+            <li><a href="#">कृषी पंप योजना</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Rally Images ===== -->
+  <section>
+    <h2 class="section-title">सन्मानाचा क्षण</h2>
+
+    <!-- Featured 3 images with description -->
+    <div class="featured-grid">
+      <div class="featured-item">
+        <img src="../IMG-20250918-WA0002.jpg" alt="रॅली 1" onclick="openLightbox(this.src)">
+        <div class="featured-info">
+          <h4>ग्रामसेवकांचा सन्मान सोहळा</h4>
+          <p>गावातील कर्तृत्ववान नागरिकांचा ग्रामसेवकांकडून स्नेहपूर्वक सत्कार</p>
+        </div>
+      </div>
+      <div class="featured-item">
+        <img src="../IMG-20250918-WA0003.jpg" alt="रॅली 2" onclick="openLightbox(this.src)">
+        <div class="featured-info">
+          <h4>एकता व कृतज्ञतेचा उत्सव</h4>
+          <p>ग्रामसेवकांनी गावकऱ्यांना एकत्र आणत कृतज्ञतेची भावना व्यक्त केली.</p>
+        </div>
+      </div>
+      <div class="featured-item">
+        <img src="../IMG-20250918-WA0004.jpg" alt="रॅली 3" onclick="openLightbox(this.src)">
+        <div class="featured-info">
+          <h4>आपुलकीचा सन्मान सोहळा</h4>
+          <p>ग्रामसेवकांनी गावकऱ्यांच्या योगदानाला प्रेमाने आणि अभिमानाने दाद दिली.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Remaining gallery -->
+    <div class="gallery-grid">
+      <img src="../IMG-20250918-WA0005.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0006.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0007.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0008.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0009.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0010.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0011.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0012.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0013.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0014.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0015.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0016.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0017.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0018.jpg" onclick="openLightbox(this.src)">
+      <img src="../IMG-20250918-WA0019.jpg" onclick="openLightbox(this.src)">
+    </div>
+  </section>
+
+  <!-- ===== Video Section ===== -->
+  <section>
+    <h2 class="section-title">व्हिडिओ गॅलरी (टीव्ही प्रक्षेपण व रॅली छायाचित्रे)</h2>
+
+    <!-- Featured 3 videos with description -->
+    <div class="featured-grid">
+      <div class="featured-item">
+        <video controls>
+          <source src="../VID-20250918-WA0009.mp4" type="video/mp4">
+        </video>
+        <div class="featured-info">
+          <h4>मुख्यमंत्री संदेश</h4>
+          <p>ग्रामस्थांनी मुख्यमंत्री देवेंद्र फडणवीस यांचा संदेश एकत्र बसून ऐकला.</p>
+        </div>
+      </div>
+      <div class="featured-item">
+        <video controls>
+          <source src="../VID-20250918-WA0002.mp4" type="video/mp4">
+        </video>
+        <div class="featured-info">
+          <h4>ग्रामसभा सहभाग</h4>
+          <p>ग्रामसभा सदस्यांनी विकास विषयावर चर्चा करताना.</p>
+        </div>
+      </div>
+      <div class="featured-item">
+        <video controls>
+          <source src="../VID-20250918-WA0001.mp4" type="video/mp4">
+        </video>
+        <div class="featured-info">
+          <h4>टीव्ही प्रक्षेपण क्षण</h4>
+          <p>गावातील प्रत्येक घरात कार्यक्रमाचे थेट प्रक्षेपण दाखवले गेले.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Remaining videos -->
+    <div class="gallery-grid">
+      <video controls><source src="../VID-20250918-WA0004.mp4" type="video/mp4"></video>
+      <video controls><source src="../VID-20250918-WA0005.mp4" type="video/mp4"></video>
+      <video controls><source src="../VID-20250918-WA0006.mp4" type="video/mp4"></video>
+      <video controls><source src="../VID-20250918-WA0007.mp4" type="video/mp4"></video>
+      <video controls><source src="../VID-20250918-WA0003.mp4" type="video/mp4"></video>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    // Image Lightbox
+    function openLightbox(src){
+      document.getElementById('lightbox').classList.add('active');
+      document.getElementById('lightbox-img').src = src;
+    }
+    function closeLightbox(){
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>

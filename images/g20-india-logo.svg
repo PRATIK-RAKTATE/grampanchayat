@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- G20 India Logo -->
+  <circle cx="30" cy="30" r="28" fill="#FF6600" stroke="#0066CC" stroke-width="2"/>
+  
+  <!-- Lotus petals (simplified) -->
+  <g fill="#FFFFFF" opacity="0.8">
+    <ellipse cx="30" cy="20" rx="4" ry="8" transform="rotate(0 30 30)"/>
+    <ellipse cx="30" cy="20" rx="4" ry="8" transform="rotate(45 30 30)"/>
+    <ellipse cx="30" cy="20" rx="4" ry="8" transform="rotate(90 30 30)"/>
+    <ellipse cx="30" cy="20" rx="4" ry="8" transform="rotate(135 30 30)"/>
+    <ellipse cx="30" cy="20" rx="4" ry="8" transform="rotate(180 30 30)"/>
+    <ellipse cx="30" cy="20" rx="4" ry="8" transform="rotate(225 30 30)"/>
+    <ellipse cx="30" cy="20" rx="4" ry="8" transform="rotate(270 30 30)"/>
+    <ellipse cx="30" cy="20" rx="4" ry="8" transform="rotate(315 30 30)"/>
+  </g>
+  
+  <!-- G20 Text -->
+  <text x="30" y="32" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold">G20</text>
+  <text x="30" y="44" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">INDIA</text>
+  <text x="30" y="52" font-family="Arial, sans-serif" font-size="6" fill="#FFFFFF" text-anchor="middle">2023</text>
+</svg>

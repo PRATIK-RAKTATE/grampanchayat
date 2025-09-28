@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>योजना - ग्रामपंचायत</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <style>
+    /* --- Grid Layout for YOJNA Page --- */
+    .parent {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 12px;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .div1 {
+      grid-column: span 3 / span 3;
+      grid-row: span 3 / span 3;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .div1 img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .div2 {
+      grid-column: span 2 / span 2;
+      grid-row: span 3 / span 3;
+      grid-column-start: 4;
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .div2 h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .div2 p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .poster-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(0deg,rgba(44,62,80,0.92) 80%,rgba(44,62,80,0.2) 100%);
+      color: #fff;
+      padding: 1rem 1.2rem 0.7rem 1.2rem;
+      border-radius: 0 0 12px 12px;
+      box-sizing: border-box;
+      text-align: left;
+    }
+    .poster-overlay h3 {
+      margin: 0 0 0.3rem 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .poster-overlay p {
+      margin: 0;
+      font-size: 0.98rem;
+      opacity: 0.95;
+    }
+    .yojna-features {
+      margin: 1.2rem 0 1rem 1.2rem;
+      padding: 0;
+      list-style: disc;
+      color: #1a4d2e;
+      font-size: 1.05rem;
+    }
+    .yojna-features li {
+      margin-bottom: 0.4rem;
+    }
+    .yojna-callout {
+      background: #eafaf1;
+      border-left: 5px solid #27ae60;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      margin-top: 1.2rem;
+      font-size: 1rem;
+      color: #145a32;
+    }
+    .yojna-callout span {
+      font-weight: bold;
+      color: #229954;
+    }
+    .yojna-callout a {
+      color: #1a73e8;
+      text-decoration: underline;
+    }
+    @media (max-width: 900px) {
+      .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+      }
+      .div1, .div2 {
+        grid-column: span 5 / span 5 !important;
+        grid-row: auto !important;
+      }
+      .div1 {
+        margin-bottom: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Government Header -->
+  <header class="gov-header">
+    <div class="container gov-header-inner">
+      <div class="gov-emblem">
+        <img src="https://panchayat.gov.in/wp-content/themes/sdo-theme/images/emblem.svg" alt="Emblem" width="90" height="90">
+      </div>
+      <div class="gov-title">
+        <h1 class="title-hindi">पंचायती राज मंत्रालय</h1>
+        <h2 class="title-english">Ministry of Panchayati Raj</h2>
+        <p class="title-subtitle">Government of India</p>
+      </div>
+      <div class="gov-logos">
+        <img src="../../images/swachh-bharat-logo.svg" alt="Swachh Bharat" width="55">
+        <img src="../../images/g20-india-logo.svg" alt="G20 India" width="55">
+        <img src="../../images/digital-india-logo.svg" alt="Digital India" width="55">
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ Navigation -->
+  <nav class="mopr-nav">
+    <div class="nav-inner">
+      <ul class="nav-menu">
+        <li><a href="../../index.html">HOME</a></li>
+        <li class="nav-item has-dropdown">
+          <button class="nav-link dropdown-toggle">योजना ▼</button>
+          <ul class="dropdown-menu">
+            <li><a href="ELECTRIC.html">विद्युत योजना</a></li>
+            <li><a href="KRUSHIPUMP.html">कृषी पंप योजना</a></li>
+            <li><a href="yojna.html">स्वच्छ भारत अभियान</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 🟦 Yojna Grid Section -->
+  <main>
+    <section class="parent">
+      <!-- Left: Only the poster image -->
+      <div class="div1">
+        <img src="IMAGES/ELECTRIC_SCHEME.jpg" alt="योजना प्रतिमा" style="width:100%; height:auto; border-radius:12px; object-fit:cover;">
+      </div>
+
+      <!-- Right: All information, more detailed and attractive -->
+      <div class="div2">
+        <h2>विद्युत योजना</h2>
+        <p>
+          <strong>योजनेचे उद्दिष्ट:</strong> ग्रामीण भागातील प्रत्येक घराला वीज उपलब्ध करून देणे, सौर ऊर्जा प्रकल्पांची अंमलबजावणी, वीज बचत मोहिम राबवणे आणि सुरक्षित वीज वितरण सुनिश्चित करणे.
+        </p>
+        <ul class="yojna-features">
+          <li>नवीन वीज जोडणीसाठी अर्ज प्रक्रिया</li>
+          <li>सौर पथदिवे व सौर पंप प्रकल्प</li>
+          <li>वीज चोरी प्रतिबंधक उपाययोजना</li>
+          <li>महिलांसाठी व विद्यार्थ्यांसाठी वीज वापर प्रशिक्षण</li>
+          <li>ग्रामीण विद्युतीकरणासाठी विशेष निधी</li>
+        </ul>
+        <div class="yojna-callout">
+          <span>सूचना:</span> अधिक माहितीसाठी ग्रामपंचायत कार्यालयाशी संपर्क साधा किंवा <a href="#">ऑनलाइन अर्ज करा</a>.
+        </div>
+        <hr style="margin:1.5rem 0;">
+        <h3 style="margin-bottom:0.5rem; color:#1a4d2e;">योजनेचे फायदे</h3>
+        <ul class="yojna-benefits" style="margin-left:1.2rem; color:#145a32;">
+          <li>घराघरात वीज पोहोचल्यामुळे जीवनमानात सुधारणा</li>
+          <li>शैक्षणिक व आरोग्य सुविधा सक्षम</li>
+          <li>सौर ऊर्जा वापरामुळे खर्चात बचत</li>
+          <li>रोजगाराच्या नवीन संधी</li>
+        </ul>
+        <div class="yojna-callout" style="background:#eafaf1; border-left:5px solid #27ae60; margin-top:1.2rem;">
+          <span style="font-weight:bold; color:#229954;">महत्त्वाची टीप:</span> अर्ज करताना ओळखपत्र व पत्त्याचा पुरावा आवश्यक आहे.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>
