@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // ...existing code...
+=======
+>>>>>>> 524119758914b91205c1cfffb2786914a5eab9fd
 // small enhancement — update year automatically
       document.getElementById("yr").textContent = new Date().getFullYear();
 
@@ -1523,6 +1526,7 @@
             `);
           }
         }, 2000);
+<<<<<<< HEAD
       });
 
       // --- Hamburger & Mobile Navigation Logic ---
@@ -1585,6 +1589,33 @@
             e.preventDefault();
           }
         }, { passive: false });
+=======
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+>>>>>>> 524119758914b91205c1cfffb2786914a5eab9fd
       });
 
       // ⚡ SUPERSONIC YOUTUBE VIDEO FUNCTIONALITY ⚡
@@ -1782,5 +1813,9 @@
           `;
           iframe.parentNode.appendChild(errorMessage);
         });
+<<<<<<< HEAD
       });
 // ...existing code...
+=======
+      });
+>>>>>>> 524119758914b91205c1cfffb2786914a5eab9fd
