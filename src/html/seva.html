@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नागरिकांसाठी सेवा</title>
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../../style.css">
+    <!-- Marathi Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Marathi:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Marathi', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f0f2f5;
+            font-size: 1rem;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            background-color: white;
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.7rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .service-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-list li {
+            margin-bottom: 1.2rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-list li::before {
+            content: "✓";
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .process-step {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem 1rem;
+            }
+
+            .section {
+                padding: 1.5rem 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p, .service-list li {
+                font-size: 1rem;
+            }
+
+            .process-step {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1rem 0.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1rem 0.75rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                border-bottom-width: 1.5px;
+            }
+
+            p, .service-list li {
+                font-size: 0.95rem;
+            }
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>नागरिकांसाठी सेवा</h1>
+        <p>सरकारी प्रणालेयातील विभिन्न सेवांचा एकसाथ समावेश आणि नागरिकांसाठी सुविधाजनक प्रक्रिया</p>
+    </header>
+
+    <div class="container">
+        <!-- Available Services Section -->
+        <section class="section">
+            <h2>उपलब्ध सेवा</h2>
+            <ul class="service-list">
+                <li>राष्ट्रपति पत्रे (Presidential Letters): राष्ट्रपतीने दिलेल्या पत्रांचे ऑनलाइन क्रमांकित आणि प्रदर्शन.</li>
+                <li>नागरिकता नमुने (Citizenship Certificate): नवीन नागरिकता नमुने वा पुनर्निर्माण नमुने मिळवण्याची सेवा.</li>
+                <li>नामांतरण सेवा (Name Change Service): नागरिकांच्या नावात बदल करण्यासाठी प्रक्रिया सहाय्य.</li>
+                <li>आयुष्य प्रमाणपत्र (Birth Certificate): जन्माचे प्रमाणपत्र ऑनलाइन शोधणे आणि मिळवणे.</li>
+                <li>मरण प्रमाणपत्र (Death Certificate): मृत्यूचे प्रमाणपत्र ऑनलाइन आवेदन आणि प्रदर्शन.</li>
+                <li>वास्तविकता प्रमाणपत्र (Identity Proof): आधार, पासपोर्ट, राज्यपत्रादीप्रमाणपत्रांची सहाय्य कार्यावली.</li>
+            </ul>
+        </section>
+
+        <!-- Process to Avail Services Section -->
+        <section class="section">
+            <h2>सेवा प्राप्तीसाठी प्रक्रिया</h2>
+            <div class="process-step">
+                <h3>चरण 1: ऑनलाइन आवेदन दर्शवणे</h3>
+                <p>सरकारी वेबसाइटवर (www.citizenservice.gov.in) लॉग इन करून तुमची आवश्यक सेवा निवडा.</p>
+            </div>
+            <div class="process-step">
+                <h3>चरण 2: कागदामजद भरणे</h3>
+                <p>आवेदनासाठी आवश्यक कागदे (जसे की आधार कार्ड, पात्रता प्रमाणपत्र, फोटोग्राफ) शीर्षवारे भरा आणि अपलोड करा.</p>
+            </div>
+            <div class="process-step">
+                <h3>चरण 3: प्रतिक्रिया गरणे</h3>
+                <p>स्थानिक ऑफिसद्वारे तुमच्या कागदांची प्रतिक्रिया केली जाईल, तर तुम्हाला ईमेल/एसएमएसमध्ये सूचित केले जाईल.</p>
+            </div>
+            <div class="process-step">
+                <h3>चरण 4: सेवा प्राप्त करणे</h3>
+                <p>प्रतिक्रिया चांगल्यानंतर, सेवा तुमच्या बँक खात्यात किंवा स्थानीय ऑफिसमध्ये मिळवून घेण्यात येईल.</p>
+            </div>
+        </section>
+
+        <!-- Contact Support Section -->
+        <section class="section">
+            <h2>मदतीसाठी संपर्क</h2>
+            <p>तुम्हाल्या आवश्यकता व्याख्या करण्यासाठी खालील संपर्कांवर कृतज्ञ करा:</p>
+            <ul>
+                <li>फोन नंबर: [स्थानीय सरकारी ऑफिस फोन नंबर] (सप्ताहाच्या कार्यावाह्य काळात 9:00 AM - 5:00 PM)</li>
+                <li>ईमेल: citizenservice@government.in</li>
+                <li>ऑफिस स्थान: मुख्य नागरिक सेवा अधिकारालय, [शहर/जिल्हा नाव], भारत</li>
+                <li>ऑनलाइन चॅट सहाय्य: www.citizenservice.gov.in/online-chat (24x7 उपलब्ध)</li>
+            </ul>
+        </section>
+
+        <!-- Quality Assurance Section -->
+        <section class="section">
+            <h2>गुणवत्तेची भागवेडी</h2>
+            <p>सरकारी सेवा प्रणालेयाने निम्न मापदण्डे स्थापित केले आहेत:</p>
+            <p>✓ सेवा प्राप्त करण्याची कालसी: १० कार्यावाह्य दिवसांत वर्तमान असेल.</p>
+            <p>✓ अपिल क्रमाची सुविधा: प्रक्रियेतील कोणत्याही विषमतेमुळे अपिल करण्यासाठी वेबसाइटवर "अपिल" प्यानबटन उपलब्ध आहे.</p>
+            <p>✓ सन्तुष्टी सर्वेक्षण: सेवा प्राप्त केलेल्यानंतर नागरिकांना सन्तुष्टी सर्वेक्षण फॉर्म प्रेषित केले जाईल, ज्याप्रमाणे सेवा गुणवत्ता सुधारती जाईल.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 सरकारी सेवा प्रणाली | नागरिका सेवा डिविजन, भारत सरकार</p>
+    </footer>
+</body>
+</html>

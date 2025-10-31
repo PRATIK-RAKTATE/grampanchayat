@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>गावाबद्दल माहिती | ग्रामपंचायत</title>
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    /* ========== Basic Reset ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Noto Sans Devanagari", Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========== Navbar ========== */
+    header.navbar {
+      background-color: #004b8d;
+      color: #fff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      text-decoration: underline;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* ========== Banner Section ========== */
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(80%);
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .banner-overlay h1 {
+      color: #fff;
+      font-size: 2.5rem;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ========== Town Info Section ========== */
+    .town-content {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .town-content section {
+      margin-bottom: 2.5rem;
+    }
+
+    .town-content h2 {
+      color: #004b8d;
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+      border-left: 4px solid #004b8d;
+      padding-left: 10px;
+    }
+
+    .town-content p {
+      font-size: 1rem;
+      text-align: justify;
+      margin-top: 0.5rem;
+    }
+
+    .town-facts ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .town-facts li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ========== Footer ========== */
+    footer {
+      background-color: #004b8d;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    /* ========== Responsive Design ========== */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #004b8d;
+        position: absolute;
+        top: 60px;
+        right: 5%;
+        width: 90%;
+        border-radius: 8px;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .banner {
+        height: 250px;
+      }
+
+      .banner-overlay h1 {
+        font-size: 1.8rem;
+      }
+
+      .town-content h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+    <!-- सरकारी शीर्षक -->
+  <header class="gov-header" role="banner">
+    <div class="container gov-header-inner">
+      <!-- डावीकडे: सरकारी चिन्ह -->
+      <div class="gov-emblem">
+        <img src="https://panchayat.gov.in/wp-content/themes/sdo-theme/images/emblem.svg"
+          alt="भारत सरकार राष्ट्रीय चिन्ह - सत्यमेव जयते (खरेपणे जिंकते)" class="emblem-img" loading="eager" width="90"
+          height="90" decoding="async" fetchpriority="high" />
+      </div>
+
+      <!-- मध्य: मंत्रालय शीर्षक -->
+      <div class="gov-title">
+        <h1 class="title-hindi">पास्ते ग्रामपंचायत</h1>
+        <h2 class="title-english">गावाचा विकास, नागरिकांचा कल्याण</h2>
+        <p class="title-subtitle">भारत सरकार</p>
+      </div>
+
+      <!-- उजवीकडे: अधिकृत लोगो -->
+      <div class="gov-logos" role="group" aria-label="सरकारी उपक्रम लोगो">
+        <img src="./../../images/swachbharat.jpg" alt="स्वच्छ भारत मोहिम - स्वच्छ भारत अभियान लोगो" class="logo-img"
+          loading="eager" width="55" height="55" decoding="async" tabindex="0" role="button"
+          aria-describedby="swachh-desc" />
+        <span id="swachh-desc" class="sr-only">स्वच्छ भारत मोहिम माहितीसाठी दुवा</span>
+        <img src="./../../images/g20indialogo.jpg" alt="G20 भारत 2023 अध्यक्षता लोगो" class="logo-img" loading="eager"
+          width="55" height="55" decoding="async" tabindex="0" role="button" aria-describedby="g20-desc" />
+        <span id="g20-desc" class="sr-only">G20 भारत अध्यक्षता माहितीसाठी दुवा</span>
+        <img src="./../../images/flagofindia.png" alt="डिजिटल इंडिया उपक्रम लोगो" class="logo-img" loading="eager" width="55"
+          height="55" decoding="async" tabindex="0" role="button" aria-describedby="digital-desc" />
+        <span id="digital-desc" class="sr-only">डिजिटल इंडिया उपक्रम माहितीसाठी दुवा</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation bar -->
+ <nav id="navbar">
+      <ul>
+        <li>
+          <a href="../../index.html">मुखपृष्ठ</a>
+        </li>
+        <li>
+          <a href="../html/administrators.html">पदाधिकारी</a>
+        </li>
+        <li>
+          <a href="..//html/villageInfo.html">गावाबद्दल माहिती</a>
+        </li>
+        <li>
+          <a href="..//html/schemes/pradhanmantri.html">शासकीय योजना</a>
+        </li>
+        <li>
+          <a href="..//html/seva.html">नागरिकांसाठी सेवा</a>
+        </li>
+        <li>
+          <a href="..//html/vard.html">वार्ड माहिती</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+    <div class="menubar">
+      <ul>
+        <li>
+          <a href="./index.html">मुखपृष्ठ</a>
+        </li>
+        <li>
+          <a href="./src/html/administrators.html">पदाधिकारी</a>
+        </li>
+        <li>
+          <a href="./src/html/villageInfo.html">गावाबद्दल माहिती</a>
+        </li>
+        <li>
+          <a href="./src/html/schemes/pradhanmantri.html">शासकीय योजना</a>
+        </li>
+        <li>
+          <a href="./src/html/seva.html">नागरिकांसाठी सेवा</a>
+        </li>
+        <li>
+          <a href="./src/html/vard.html">वार्ड माहिती</a>
+        </li>
+      </ul>
+    </div>
+<!-- Navigation bar End -->
+
+  <!-- Banner -->
+  <section class="banner">
+    <img src="https://images.unsplash.com/photo-1597300694752-87122c4e4f36?auto=format&fit=crop&w=1600&q=80" alt="Village Image">
+    <div class="banner-overlay">
+      <h1>गावाबद्दल माहिती</h1>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="town-content">
+    <section>
+      <h2>गावाची ओळख</h2>
+      <p>
+        आमचे गाव एक सुंदर, हरित आणि ऐतिहासिक ठिकाण आहे. येथे शेती हा प्रमुख व्यवसाय असून बहुतांश लोक शेतीवर अवलंबून आहेत. 
+        गावात शाळा, आरोग्य केंद्र आणि पाणीपुरवठा सुविधा उत्तम प्रकारे उपलब्ध आहेत.
+      </p>
+    </section>
+
+    <section>
+      <h2>इतिहास</h2>
+      <p>
+        या गावाचा इतिहास शेकडो वर्षांचा आहे. येथे प्राचीन मंदिरे, परंपरा आणि सण हे गावाची ओळख दर्शवतात. 
+        समाजातील एकोपा आणि सहकार्य हे या गावाचे वैशिष्ट्य आहे.
+      </p>
+    </section>
+
+    <section>
+      <h2>गावाचा विकास</h2>
+      <p>
+        अलीकडच्या काही वर्षांत ग्रामपंचायतीने विविध योजनांद्वारे जलसंधारण, रस्ते बांधणी, स्वच्छता, शिक्षण आणि डिजिटल सेवा यामध्ये मोठा बदल घडवून आणला आहे.
+      </p>
+    </section>
+
+    <section class="town-facts">
+      <h2>महत्वाची माहिती</h2>
+      <ul>
+        <li>लोकसंख्या: ३५००</li>
+        <li>मुख्य व्यवसाय: शेती</li>
+        <li>नदी: गोदावरी</li>
+        <li>तालुका: सिन्नर</li>
+        <li>जिल्हा: नाशिक</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 ग्रामपंचायत. सर्व हक्क राखीव.
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Close menu when clicking outside or on a link
+    document.addEventListener("click", (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove("active");
+      }
+      if (e.target.tagName === "A") {
+        navLinks.classList.remove("active");
+      }
+    });
+  </script>
+</body>
+</html>

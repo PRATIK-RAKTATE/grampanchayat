@@ -4,43 +4,339 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>पदाधिकारी | ग्रामपंचायत</title>
-  <link rel="stylesheet" href="../css/administrators.css" />
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <!-- Marathi Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Marathi:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base Reset & Typography */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans Marathi', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background-color: #2c3e50;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: flex-end;
+      list-style: none; /* Not needed if using <nav>, but safe to include */
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #e0e0e0;
+    }
+
+    .nav-links a.active {
+      color: #3498db;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    /* Main Content Styles */
+    .admins-section {
+      padding: 4rem 0;
+      background-color: #f8f9fa;
+    }
+
+    .section-title {
+      color: #2c3e50;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .admins-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1000px; /* Center grid slightly */
+      margin: 0 auto;
+    }
+
+    .admin-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+      min-height: 300px; /* Prevent card height issues */
+    }
+
+    .admin-card:hover {
+      transform: translateY(-5px); /* Slight lift on hover */
+    }
+
+    .admin-card img {
+      width: 150px;
+      height: 150px;
+      max-width: 100%; /* Responsive image */
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+    }
+
+    .admin-card h2 {
+      color: #3498db;
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .role {
+      color: #7f8c8d;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact {
+      color: #2c3e50;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design for Mobile/Tablet */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 0.8rem 0;
+      }
+
+      .logo {
+        font-size: 1.3rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        justify-content: center; /* Center nav links on smaller screens */
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .admins-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 0 1rem; /* Add side padding for grid */
+      }
+
+      .admin-card {
+        padding: 1.5rem;
+        min-height: 280px;
+      }
+
+      .admin-card img {
+        width: 130px;
+        height: 130px;
+      }
+
+      .admin-card h2 {
+        font-size: 1.2rem;
+      }
+
+      .role {
+        font-size: 1rem;
+      }
+
+      .contact {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .nav-links {
+        flex-direction: column; /* Stack nav links vertically */
+        gap: 0.5rem;
+        align-items: center;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .admins-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+      }
+
+      .admin-card {
+        padding: 1rem;
+        min-height: auto;
+      }
+
+      .admin-card img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1rem;
+      }
+
+      .admin-card h2 {
+        font-size: 1.1rem;
+      }
+
+      .role {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .contact {
+        font-size: 0.85rem;
+      }
+
+      .footer {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
 </head>
-<body>
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">ग्रामपंचायत</a>
-      <nav class="nav-links">
-        <a href="index.html">मुखपृष्ठ</a>
-        <a href="administrators.html" class="active">पदाधिकारी</a>
-        <a href="services.html">सेवा</a>
-        <a href="contact.html">संपर्क</a>
-      </nav>
+<body> 
+    <header class="gov-header" role="banner">
+    <div class="container gov-header-inner">
+      <!-- डावीकडे: सरकारी चिन्ह -->
+      <div class="gov-emblem">
+        <img src="https://panchayat.gov.in/wp-content/themes/sdo-theme/images/emblem.svg"
+          alt="भारत सरकार राष्ट्रीय चिन्ह - सत्यमेव जयते (खरेपणे जिंकते)" class="emblem-img" loading="eager" width="90"
+          height="90" decoding="async" fetchpriority="high" />
+      </div>
+
+      <!-- मध्य: मंत्रालय शीर्षक -->
+      <div class="gov-title">
+        <h1 class="title-hindi">पास्ते ग्रामपंचायत</h1>
+        <h2 class="title-english">गावाचा विकास, नागरिकांचा कल्याण</h2>
+        <p class="title-subtitle">भारत सरकार</p>
+      </div>
+
+      <!-- उजवीकडे: अधिकृत लोगो -->
+      <div class="gov-logos" role="group" aria-label="सरकारी उपक्रम लोगो">
+        <img src="./../../images/swachbharat.jpg" alt="स्वच्छ भारत मोहिम - स्वच्छ भारत अभियान लोगो" class="logo-img"
+          loading="eager" width="55" height="55" decoding="async" tabindex="0" role="button"
+          aria-describedby="swachh-desc" />
+        <span id="swachh-desc" class="sr-only">स्वच्छ भारत मोहिम माहितीसाठी दुवा</span>
+        <img src="./../../images/g20indialogo.jpg" alt="G20 भारत 2023 अध्यक्षता लोगो" class="logo-img" loading="eager"
+          width="55" height="55" decoding="async" tabindex="0" role="button" aria-describedby="g20-desc" />
+        <span id="g20-desc" class="sr-only">G20 भारत अध्यक्षता माहितीसाठी दुवा</span>
+        <img src="./../../images/flagofindia.png" alt="डिजिटल इंडिया उपक्रम लोगो" class="logo-img" loading="eager" width="55"
+          height="55" decoding="async" tabindex="0" role="button" aria-describedby="digital-desc" />
+        <span id="digital-desc" class="sr-only">डिजिटल इंडिया उपक्रम माहितीसाठी दुवा</span>
+      </div>
     </div>
   </header>
 
+  <nav id="navbar">
+      <ul>
+        <li>
+          <a href="../../index.html">मुखपृष्ठ</a>
+        </li>
+        <li>
+          <a href="./administrators.html">पदाधिकारी</a>
+        </li>
+        <li>
+          <a href="./villageInfo.html">गावाबद्दल माहिती</a>
+        </li>
+        <li>
+          <a href="./schemes/pradhanmantri.html">शासकीय योजना</a>
+        </li>
+        <li>
+          <a href="./seva.html">नागरिकांसाठी सेवा</a>
+        </li>
+        <li>
+          <a href="./vard.html">वार्ड माहिती</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+    <div class="menubar">
+      <ul>
+        <li>
+          <a href="./index.html">मुखपृष्ठ</a>
+        </li>
+        <li>
+          <a href="./administrators.html">पदाधिकारी</a>
+        </li>
+        <li>
+          <a href="./villageInfo.html">गावाबद्दल माहिती</a>
+        </li>
+        <li>
+          <a href="./schemes/pradhanmantri.html">शासकीय योजना</a>
+        </li>
+        <li>
+          <a href="./seva.html">नागरिकांसाठी सेवा</a>
+        </li>
+        <li>
+          <a href="./vard.html">वार्ड माहिती</a>
+        </li>
+      </ul>
+    </div>
   <main class="admins-section">
     <div class="container">
       <h1 class="section-title">ग्रामपंचायत पदाधिकारी</h1>
-
       <div class="admins-grid">
         <div class="admin-card">
           <img src="../../images/krishna.jpeg" alt="सरपंच" />
-          <h2>सौ. आरती देशमुख</h2>
+          <h2>सौ. </h2>
           <p class="role">सरपंच</p>
           <p class="contact">📞 9876543210</p>
         </div>
-
         <div class="admin-card">
           <img src="../../images/krishna.jpeg" alt="उपसरपंच" />
-          <h2>श्री. राजेश पाटील</h2>
+          <h2>श्री. </h2>
           <p class="role">उपसरपंच</p>
           <p class="contact">📞 8765432109</p>
         </div>
-
         <div class="admin-card">
           <img src="../../images/krishna.jpeg" alt="ग्रामसेवक" />
-          <h2>श्री. सुनील शिंदे</h2>
+          <h2>श्री. </h2>
           <p class="role">ग्रामसेवक</p>
           <p class="contact">📞 9988776655</p>
         </div>
