@@ -103,7 +103,7 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         scroll-behavior: smooth; /* Smooth scrolling for better UX */
-        overflow-x: hidden; /* Prevent horizontal scroll */
+        overflow-x: hidden !important; /* Prevent horizontal scroll */
       }
       
       /* Enhanced focus management for better accessibility */

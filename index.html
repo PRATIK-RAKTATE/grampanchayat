@@ -1,1014 +1,650 @@
 <!DOCTYPE html>
 <html lang="mr-IN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <title>ग्राम पंचायत — अधिकृत पोर्टल</title>
-    <meta
-      name="description"
-      content="ग्राम पंचायतची अधिकृत वेबसाइट — सेवा, योजना, सूचना आणि संपर्क."
-    />
 
-    <!-- सरकारी मानक फॉन्ट -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>ग्राम पंचायत — अधिकृत पोर्टल</title>
+  <meta name="description" content="ग्राम पंचायतची अधिकृत वेबसाइट — सेवा, योजना, सूचना आणि संपर्क." />
 
-    <!-- जलद लोडिंगसाठी महत्त्वाचे सरकारी लोगो प्रीलोड करा -->
-    <link
-      rel="preload"
-      href="images/government-emblem.svg"
-      as="image"
-      type="image/svg+xml"
-      fetchpriority="high"
-    />
-    <link
-      rel="preload"
-      href="images/swachbharat.jpg"
-      as="image"
-      type="image/svg+xml"
-      fetchpriority="high"
-    />
-    <link
-      rel="preload"
-      href="images/g20indialogo.jpg"
-      as="image"
-      type="image/svg+xml"
-      fetchpriority="high"
-    />
-    <link
-      rel="preload"
-      href="images/flagofindia.png"
-      as="image"
-      type="image/svg+xml"
-      fetchpriority="high"
-    />
+  <!-- सरकारी मानक फॉन्ट -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- चांगल्या कार्यक्षमतेसाठी पहिल्या स्लाइडशो इमेज प्रीलोड करा -->
-    <link
-      rel="preload"
-      href="images/image1.jpeg"
-      as="image"
-      fetchpriority="high"
-    />
-    
-    <!-- ⚡ अत्यंत जलद कार्यक्षमता: YouTube थंबनेल प्रीलोड करा ⚡ -->
-    <link rel="preconnect" href="https://img.youtube.com" />
-    <link rel="preconnect" href="https://www.youtube.com" />
-    <link rel="dns-prefetch" href="https://img.youtube.com" />
-    <link rel="dns-prefetch" href="https://www.youtube.com" />
+  <!-- जलद लोडिंगसाठी महत्त्वाचे सरकारी लोगो प्रीलोड करा -->
+  <link rel="preload" href="images/government-emblem.svg" as="image" type="image/svg+xml" fetchpriority="high" />
+  <link rel="preload" href="images/swachbharat.jpg" as="image" type="image/svg+xml" fetchpriority="high" />
+  <link rel="preload" href="images/g20indialogo.jpg" as="image" type="image/svg+xml" fetchpriority="high" />
+  <link rel="preload" href="images/flagofindia.png" as="image" type="image/svg+xml" fetchpriority="high" />
 
-    <!-- बाह्य संसाधनांसाठी DNS प्रीफेच -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <!-- चांगल्या कार्यक्षमतेसाठी पहिल्या स्लाइडशो इमेज प्रीलोड करा -->
+  <link rel="preload" href="images/image1.jpeg" as="image" fetchpriority="high" />
 
-    <!-- कार्यक्षमतेसाठी संसाधन संकेत -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- ⚡ अत्यंत जलद कार्यक्षमता: YouTube थंबनेल प्रीलोड करा ⚡ -->
+  <link rel="preconnect" href="https://img.youtube.com" />
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="dns-prefetch" href="https://img.youtube.com" />
+  <link rel="dns-prefetch" href="https://www.youtube.com" />
 
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip" href="#main">मुख्य सामग्रीवर जा</a>
+  <!-- बाह्य संसाधनांसाठी DNS प्रीफेच -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
-    <!-- उपयुक्तता पट्टी -->
-    <div class="utility">
-      <div class="container inner">
-        <div class="util-left">
-          <span class="badge" aria-hidden="true"
-            >भारत सरकार · Govt. of India</span
-          >
-          <span class="muted">प्रवेशता:</span>
-          <div
-            class="a11y-group"
-            role="group"
-            aria-label="प्रवेशता साधने (फक्त दृश्य)"
-          >
-            <button type="button" title="मजकूर आकार वाढवा">A+</button>
-            <button type="button" title="मजकूर आकार कमी करा">A−</button>
-            <button type="button" title="उच्च कॉन्ट्रास्ट">HC</button>
-            <button type="button" title="दुवे ठळक करा">HL</button>
+  <!-- कार्यक्षमतेसाठी संसाधन संकेत -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="src/css/navbar.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">मुख्य सामग्रीवर जा</a>
+
+  <!-- उपयुक्तता पट्टी -->
+  <div class="utility">
+    <div class="container inner">
+      <div class="util-left">
+        <span class="badge" aria-hidden="true">भारत सरकार · Govt. of India</span>
+        <span class="muted">प्रवेशता:</span>
+          <button type="button" title="मजकूर आकार वाढवा">A+</button>
+          <button type="button" title="मजकूर आकार कमी करा">A−</button>
+          <button type="button" title="उच्च कॉन्ट्रास्ट">HC</button>
+      </div>
+      
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- सरकारी शीर्षक -->
+  <header class="gov-header" role="banner">
+    <div class="container gov-header-inner">
+      <!-- डावीकडे: सरकारी चिन्ह -->
+      <div class="gov-emblem">
+        <img src="https://panchayat.gov.in/wp-content/themes/sdo-theme/images/emblem.svg"
+          alt="भारत सरकार राष्ट्रीय चिन्ह - सत्यमेव जयते (खरेपणे जिंकते)" class="emblem-img" loading="eager" width="90"
+          height="90" decoding="async" fetchpriority="high" />
+      </div>
+
+      <!-- मध्य: मंत्रालय शीर्षक -->
+      <div class="gov-title">
+        <h1 class="title-hindi">पास्ते ग्रामपंचायत</h1>
+        <h2 class="title-english">गावाचा विकास, नागरिकांचा कल्याण</h2>
+        <p class="title-subtitle">भारत सरकार</p>
+      </div>
+
+      <!-- उजवीकडे: अधिकृत लोगो -->
+      <div class="gov-logos" role="group" aria-label="सरकारी उपक्रम लोगो">
+        <img src="images/swachbharat.jpg" alt="स्वच्छ भारत मोहिम - स्वच्छ भारत अभियान लोगो" class="logo-img"
+          loading="eager" width="55" height="55" decoding="async" tabindex="0" role="button"
+          aria-describedby="swachh-desc" />
+        <span id="swachh-desc" class="sr-only">स्वच्छ भारत मोहिम माहितीसाठी दुवा</span>
+        <img src="images/g20indialogo.jpg" alt="G20 भारत 2023 अध्यक्षता लोगो" class="logo-img" loading="eager"
+          width="55" height="55" decoding="async" tabindex="0" role="button" aria-describedby="g20-desc" />
+        <span id="g20-desc" class="sr-only">G20 भारत अध्यक्षता माहितीसाठी दुवा</span>
+        <img src="images/flagofindia.png" alt="डिजिटल इंडिया उपक्रम लोगो" class="logo-img" loading="eager" width="55"
+          height="55" decoding="async" tabindex="0" role="button" aria-describedby="digital-desc" />
+        <span id="digital-desc" class="sr-only">डिजिटल इंडिया उपक्रम माहितीसाठी दुवा</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation bar -->
+ <nav id="navbar">
+      <ul>
+        <li>
+          <a href="./index.html">मुखपृष्ठ</a>
+        </li>
+        <li>
+          <a href="./src/html/administrators.html">पदाधिकारी</a>
+        </li>
+        <li>
+          <a href="#">गावाबद्दल माहिती</a>
+        </li>
+        <li>
+          <a href="#">शासकीय योजना</a>
+        </li>
+        <li>
+          <a href="#">नागरिकांसाठी सेवा</a>
+        </li>
+        <li>
+          <a href="#">वार्ड माहिती</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+    <div class="menubar">
+      <ul>
+        <li>
+          <a href="./index.html">मुखपृष्ठ</a>
+        </li>
+        <li>
+          <a href="./src/html/administrators.html">पदाधिकारी</a>
+        </li>
+        <li>
+          <a href="#">गावाबद्दल माहिती</a>
+        </li>
+        <li>
+          <a href="#">शासकीय योजना</a>
+        </li>
+        <li>
+          <a href="#">नागरिकांसाठी सेवा</a>
+        </li>
+        <li>
+          <a href="#">वार्ड माहिती</a>
+        </li>
+      </ul>
+    </div>
+
+
+  <main id="main" tabindex="-1">
+    <!-- मन की बात इमेज स्लाइडशो -->
+    <section class="hero" aria-label="मन की बात स्लाइडशो" role="region">
+      <div class="mann-ki-baat-slideshow" role="img" aria-live="polite" aria-atomic="false"
+        aria-label="मन की बात स्लाइडशो 5 स्लाइडसह">
+        <div class="slideshow-container">
+          <!-- स्लाइड 1 - पहिल्या स्लाइडसाठी तात्काळ लोडिंग -->
+          <div class="slide active" data-bg-image="images/image1.jpeg" role="img"
+            aria-label="पंतप्रधान राष्ट्राला संबोधत आहेत - स्लाइड 1 ते 5" aria-hidden="false">
+            <img src="images/image1.jpeg" alt="पंतप्रधान राष्ट्राला संबोधत आहेत" loading="eager" fetchpriority="high"
+              width="1200" height="600" style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  z-index: -1;
+                " />
+          </div>
+
+          <!-- स्लाइड 2 - पुढील स्लाइडसाठी विलंबित लोडिंग -->
+          <div class="slide" data-bg-image="images/image2.jpg" role="img"
+            aria-label="सरकारी उपक्रम आणि कार्यक्रम - स्लाइड 2 ते 5" aria-hidden="true">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E"
+              data-src="images/image2.jpg" alt="सरकारी उपक्रम आणि कार्यक्रम" loading="lazy" width="1200" height="600"
+              style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  z-index: -1;
+                " />
+          </div>
+
+          <!-- स्लाइड 3 -->
+          <div class="slide" data-bg-image="images/image3.jpg" role="img"
+            aria-label="ग्रामीण विकास आणि शासन - स्लाइड 3 ते 5" aria-hidden="true">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E"
+              data-src="images/image3.jpg" alt="ग्रामीण विकास आणि शासन" loading="lazy" width="1200" height="600" style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  z-index: -1;
+                " />
+          </div>
+
+          <!-- स्लाइड 4 -->
+          <div class="slide" data-bg-image="images/image4.webp" role="img"
+            aria-label="डिजिटल इंडिया आणि तंत्रज्ञान उपक्रम - स्लाइड 4 ते 5" aria-hidden="true">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E"
+              data-src="images/image4.webp" alt="डिजिटल इंडिया आणि तंत्रज्ञान उपक्रम" loading="lazy" width="1200"
+              height="600" style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  z-index: -1;
+                " />
+          </div>
+
+          <!-- स्लाइड 5 -->
+          <div class="slide" data-bg-image="images/image5.webp" role="img"
+            aria-label="पंचायती राज आणि स्थानिक शासन - स्लाइड 5 ते 5" aria-hidden="true">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E"
+              data-src="images/image5.webp" alt="पंचायती राज आणि स्थानिक शासन" loading="lazy" width="1200" height="600"
+              style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  z-index: -1;
+                " />
           </div>
         </div>
-        <div class="util-right">
-          <nav aria-label="सामाजिक माध्यम">
-            <ul
-              role="list"
-              style="display: flex; gap: 0.5rem; margin: 0; padding: 0"
-            >
-              <li><a href="#" aria-label="फेसबुक">FB</a></li>
-              <li><a href="#" aria-label="एक्स">X</a></li>
-              <li><a href="#" aria-label="इन्स्टाग्राम">IG</a></li>
-              <li><a href="#" aria-label="यूट्यूब">YT</a></li>
-            </ul>
-          </nav>
-          <div class="lang" aria-label="भाषा बदल">
-            <a href="#" lang="hi" hreflang="hi">हिन्दी</a>
-            <a href="#" aria-current="page">मराठी</a>
+
+        <!-- नेव्हिगेशन बाण -->
+        <button class="nav-arrow prev" aria-label="मागील स्लाइडवर जा" id="prevSlide" type="button"
+          aria-describedby="slideshow-help">
+          <span aria-hidden="true">◀</span>
+          <span class="sr-only">मागील</span>
+        </button>
+        <button class="nav-arrow next" aria-label="पुढील स्लाइडवर जा" id="nextSlide" type="button"
+          aria-describedby="slideshow-help">
+          <span aria-hidden="true">▶</span>
+          <span class="sr-only">पुढील</span>
+        </button>
+
+        <!-- प्ले/थांब बटण -->
+        <button class="play-pause-btn" aria-label="स्वयंचलित स्लाइडशो थांबवा" id="playPauseBtn" type="button"
+          aria-pressed="false" aria-describedby="slideshow-help">
+          <span aria-hidden="true">⏸</span>
+          <span class="sr-only">थांबवा</span>
+        </button>
+
+        <!-- स्लाइड संकेतक -->
+        <div class="slide-indicators" role="tablist" aria-label="स्लाइडशो नेव्हिगेशन" aria-describedby="slideshow-help">
+          <button class="indicator active" data-slide="0" role="tab" aria-selected="true" aria-label="स्लाइड 1 वर जा"
+            tabindex="0"></button>
+          <button class="indicator" data-slide="1" role="tab" aria-selected="false" aria-label="स्लाइड 2 वर जा"
+            tabindex="-1"></button>
+          <button class="indicator" data-slide="2" role="tab" aria-selected="false" aria-label="स्लाइड 3 वर जा"
+            tabindex="-1"></button>
+          <button class="indicator" data-slide="3" role="tab" aria-selected="false" aria-label="स्लाइड 4 वर जा"
+            tabindex="-1"></button>
+          <button class="indicator" data-slide="4" role="tab" aria-selected="false" aria-label="स्लाइड 5 वर जा"
+            tabindex="-1"></button>
+        </div>
+
+        <!-- बातम्या टिकर -->
+        <div class="news-ticker-container" role="marquee" aria-label="नवीनतम बातम्या टिकर">
+          <div class="news-ticker" aria-live="off">
+            <div class="news-ticker-label" aria-hidden="true">
+              नवीनतम बातम्या
+            </div>
+            <div class="news-ticker-content" role="status"
+              aria-label="नवीनतम बातम्या: 31 ऑगस्ट 2025 रोजी सकाळी 11:00 वाजता पंतप्रधान मन की बातमध्ये राष्ट्राला संबोधतील">
+              31 ऑगस्ट 2025 रोजी सकाळी 11:00 वाजता पंतप्रधान मन की बातमध्ये राष्ट्राला संबोधतील • ग्रामीण विकासासाठी
+              नवीन उपक्रम घोषित • डिजिटल इंडिया प्रगती अद्यतन • स्वच्छ भारत मोहिम यशस्वी • G20 भारत अध्यक्षता ठळक मुद्दे
+              • पंचायती राज सुदृढीकरण उपाययोजना
+            </div>
           </div>
+        </div>
+
+        <!-- स्क्रीन वाचकांसाठी लपविलेला मदतीचा मजकूर -->
+        <div id="slideshow-help" class="sr-only">
+          स्लाइडस नेव्हिगेट करण्यासाठी बाण की वापरा, स्पेसबारने प्ले/थांबवा, किंवा खालील संकेतकांवर क्लिक करून विशिष्ट
+          स्लाइडवर जा.
+        </div>
+      </div>
+    </section>
+
+    <!-- MOPR-शैली मुख्य सामग्री मांडणी -->
+    <section class="container section section-white">
+      <div class="mopr-content-layout">
+        <!-- डावी स्तंभ: MOPR बद्दल -->
+        <article class="mopr-main-content" aria-labelledby="about-gp-title">
+          <header class="mopr-content-header">
+            <h2 id="about-gp-title">आपल्या ग्रामपंचायती विषयी</h2>
+          </header>
+          <div class="mopr-content-body">
+            <p>
+              आपल्या ग्रामपंचायत ही गावातील स्थानिक स्वराज्य संस्था असून ती नागरिकांच्या
+              दैनंदिन गरजा, विकास योजना आणि सामाजिक उपक्रमांची अंमलबजावणी करते.
+              ग्रामपंचायत ही गावाच्या प्रगतीसाठी एक महत्त्वाची कडी आहे आणि ती
+              लोकशाही पद्धतीने निवडून आलेल्या सदस्यांद्वारे कार्य करते.
+            </p>
+            <p>
+              आमची ग्रामपंचायत गावातील पायाभूत सुविधा, शिक्षण, आरोग्य, पाणीपुरवठा,
+              स्वच्छता आणि ग्रामविकास कार्यक्रम राबवते. याशिवाय नागरिकांना
+              शासनाच्या विविध योजना, अनुदाने व सुविधा सहज उपलब्ध करून देण्याचे
+              कामही ग्रामपंचायत करते.
+            </p>
+            <p>
+              ग्रामसभेच्या माध्यमातून प्रत्येक नागरिकाला निर्णय प्रक्रियेत
+              सहभागी होण्याची संधी दिली जाते. ग्रामपंचायत पारदर्शकता, उत्तरदायित्व
+              आणि सामूहिक विकास यावर भर देते.
+            </p>
+
+            <h3>मुख्य जबाबदाऱ्या</h3>
+            <ul class="gp-function-list">
+              <li>गावातील पायाभूत सुविधा विकास (रस्ते, पाणी, वीज इ.)</li>
+              <li>आरोग्य व स्वच्छता अभियानांची अंमलबजावणी</li>
+              <li>शिक्षण व प्रशिक्षण उपक्रम</li>
+              <li>शासनाच्या विविध योजना नागरिकांपर्यंत पोहोचवणे</li>
+              <li>ग्रामसभेच्या माध्यमातून निर्णय प्रक्रिया</li>
+              <li>सामाजिक उपक्रम व सांस्कृतिक कार्यक्रमांना प्रोत्साहन</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- उजवी स्तंभ: महत्त्वाचे दस्तावेज -->
+        <aside class="mopr-sidebar" aria-labelledby="sidebar-documents-title">
+          <div class="mopr-sidebar-section">
+            <header class="mopr-sidebar-header">
+              <h2 id="sidebar-documents-title" style="color: #fff;">महत्वपूर्ण दस्तावेज</h2>
+            </header>
+            <ul class="mopr-documents-list" role="list">
+              <li class="mopr-document-item">
+                <a href="PDF'S/202508061325445120.pdf" target="_blank" class="mopr-document-link">
+                  <div class="document-icon">📄</div>
+                  <div class="document-info">
+                    <span class="mopr-document-title">एसडीजी-सुसंगत ग्रामीण विकासासाठी महाराष्ट्र शासन निर्णय
+                      (२०१५)</span>
+                    <span class="mopr-document-meta">PDF • सरकारी दस्तावेज</span>
+                  </div>
+                  <div class="document-actions">
+                    <span class="view-icon">👁️</span>
+                  </div>
+                </a>
+              </li>
+              <li class="mopr-document-item">
+                <a href="PDF'S/MSPRA TRAINING MODULE FOR STATE 28 AUG 2025.pdf" target="_blank"
+                  class="mopr-document-link">
+                  <div class="document-icon">📋</div>
+                  <div class="document-info">
+                    <span class="mopr-document-title">मुख्यमंत्री समृद्ध पंचायत अभियान व पंचायती राज प्रणालीतील SDG
+                      स्थानिकीकरण (२०२५)</span>
+                    <span class="mopr-document-meta">PDF • प्रशिक्षण मॉड्यूल</span>
+                  </div>
+                  <div class="document-actions">
+                    <span class="view-icon">👁️</span>
+                  </div>
+                </a>
+              </li>
+              <li class="mopr-document-item">
+                <a href="PDF'S/2 MSPRA LOKSAHBHAG  30 AUG 2025.pdf" target="_blank" class="mopr-document-link">
+                  <div class="document-icon">🤝</div>
+                  <div class="document-info">
+                    <span class="mopr-document-title">मुख्यमंत्री समृद्ध पंचायत राज अभियान : पारस्परिक शिक्षण व
+                      ज्ञानविनिमयावर आधारित ग्रामपंचायतींचे सक्षमीकरण</span>
+                    <span class="mopr-document-meta">PDF • लोकसहभाग</span>
+                  </div>
+                  <div class="document-actions">
+                    <span class="view-icon">👁️</span>
+                  </div>
+                </a>
+              </li>
+              <li class="mopr-document-item">
+                <a href="PDF'S/1 MSPRA SCHEME CONTENT 30 AUG 2025.pdf" target="_blank" class="mopr-document-link">
+                  <div class="document-icon">⭐</div>
+                  <div class="document-info">
+                    <span class="mopr-document-title">मुख्यमंत्री समृद्ध ग्राम पंचायत राज अभियानाचे मूल्यांकन घटक व गुण
+                      प्रणाली</span>
+                    <span class="mopr-document-meta">PDF • योजना सामग्री</span>
+                  </div>
+                  <div class="document-actions">
+                    <span class="view-icon">👁️</span>
+                  </div>
+                </a>
+              </li>
+              <li class="mopr-document-item">
+                <a href="PDF'S/3 MSPRA IEC  30 AUG 2025.pdf" target="_blank" class="mopr-document-link">
+                  <div class="document-icon">📊</div>
+                  <div class="document-info">
+                    <span class="mopr-document-title">मुख्यमंत्री समृद्ध ग्राम पंचायत अभियानासाठी मूल्यांकन निकष व
+                      गुणांकन प्रणालीचे तपशील</span>
+                    <span class="mopr-document-meta">PDF • IEC सामग्री</span>
+                  </div>
+                  <div class="document-actions">
+                    <span class="view-icon">👁️</span>
+                  </div>
+                </a>
+              </li>
+              <!-- नवीन दस्तावेज आयटम खाली जोडलेला आहे -->
+              <li class="mopr-document-item">
+                <a href="PDF'S/yearly_expense.pdf" target="_blank" class="mopr-document-link">
+                  <div class="document-icon">📑</div>
+                  <div class="document-info">
+                    <span class="mopr-document-title">वार्षिक/मासिक लेखा सादरीकरणाबाबत शासन आदेश</span>
+                    <span class="mopr-document-meta">PDF • लेखा आदेश</span>
+                  </div>
+                  <div class="document-actions">
+                    <span class="view-icon">👁️</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="mopr-sidebar-footer">
+              <a href="#" class="mopr-view-all-link">सर्व दस्तावेज पहा →</a>
+            </div>
+          </div>
+
+
+        </aside>
+      </div>
+    </section>
+
+    <!-- महत्त्वाच्या सेवा -->
+    <section class="section-featured" aria-labelledby="services-title">
+      <div class="container">
+        <header>
+          <h2 id="services-title">योजना आणि महत्त्वाच्या सेवा</h2>
+          <p class="muted">
+            ग्रामीण विकास आणि पंचायती राज सुदृढीकरणासाठी सरकारी उपक्रम
+          </p>
+        </header>
+        <div class="grid">
+          <a class="service" href="#" aria-label="आरजीएसए - राष्ट्रीय ग्राम स्वराज अभियान">
+            <h3>आरजीएसए</h3>
+            <p>
+              राष्ट्रीय ग्राम स्वराज अभियान - सर्वत्र पंचायती राज संस्था सुदृढ करणे
+            </p>
+          </a>
+          <a class="service" href="#" aria-label="स्वामित्व योजना">
+            <h3>स्वामित्व</h3>
+            <p>
+              गावांचे सर्वेक्षण आणि उन्नत तंत्रज्ञानासह नकाशाकरण - ग्रामीण क्षेत्रांसाठी मालमत्ता कार्ड
+            </p>
+          </a>
+          <a class="service" href="#" aria-label="ई-ग्रामस्वराज पोर्टल">
+            <h3>ई-ग्रामस्वराज</h3>
+            <p>
+              ग्रामपंचायत योजनाकरण, लेखापरीक्षण आणि नियंत्रण कार्यक्रमांसाठी डिजिटल प्लॅटफॉर्म
+            </p>
+          </a>
+          <a class="service" href="#" aria-label="ऑडिटऑनलाइन प्लॅटफॉर्म">
+            <h3>ऑडिटऑनलाइन</h3>
+            <p>
+              पंचायत शासनात पारदर्शकता सुनिश्चित करणारे ऑनलाइन सामाजिक लेखापरीक्षण प्लॅटफॉर्म
+            </p>
+          </a>
+          <a class="service" href="#" aria-label="पंचायत पुरस्कार">
+            <h3>राष्ट्रीय पंचायत पुरस्कार</h3>
+            <p>
+              राष्ट्रीय गौरव ग्राम सभा पुरस्कार आणि इतर उत्कृष्टता ओळख प्रोग्राम
+            </p>
+          </a>
+          <a class="service" href="#" aria-label="पेशा अंमलबजावणी">
+            <h3>पेशा</h3>
+            <p>
+              अनुसूचित क्षेत्रांसाठी पंचायतींचा विस्तार - आदिवासी स्व-शासन सक्षम करणे
+            </p>
+          </a>
+          <a class="service" href="#" aria-label="एसडीजी स्थानिकीकरण">
+            <h3>एसडीजी स्थानिकीकरण</h3>
+            <p>
+              पंचायत स्तरावर स्थायी विकास लक्ष्यांची अंमलबजावणी आणि नियंत्रण
+            </p>
+          </a>
+          <a class="service" href="#" aria-label="क्षमता निर्माण कार्यक्रम">
+            <h3>प्रशिक्षण आणि क्षमता निर्माण</h3>
+            <p>
+              निवडक प्रतिनिधी आणि पंचायत कार्यकर्त्यांसाठी कौशल्य विकास कार्यक्रम
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- छायाचित्र संग्रह -->
+    <section class="container section section-light photo-gallery-section" aria-labelledby="photos-title"
+      style="margin-top: 4rem;">
+      <header class="gallery-header">
+        <h2 id="photos-title">छायाचित्र संग्रह</h2>
+        <p>ग्रामीण विकास उपक्रम आणि पंचायत कार्यक्रमांचे क्षण साठवले</p>
+      </header>
+
+      <div class="gallery-container">
+        <!-- 3 संग्रह फिरत असलेले गॅलरी -->
+        <div class="rotating-gallery-wrapper">
+          <div class="rotating-track" id="rotatingTrack">
+            <!-- संग्रह 1 -->
+            <div class="photo-container">
+              <div class="photo-card">
+                <img src="images/image1.jpeg" alt="ग्रामीण विकास उपक्रम" loading="lazy">
+                <div class="card-overlay">
+                  <h4>ग्रामीण विकास</h4>
+                  <p>समुदाय सक्षमीकरण कार्यक्रम</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- संग्रह 2 -->
+            <div class="photo-container">
+              <div class="photo-card">
+                <img src="images/image2.jpg" alt="समुदाय सहभाग" loading="lazy">
+                <div class="card-overlay">
+                  <h4>समुदाय सहभाग</h4>
+                  <p>लोकशाही सहभाग उपक्रम</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- संग्रह 3 -->
+            <div class="photo-container">
+              <div class="photo-card">
+                <img src="images/image3.jpg" alt="पायाभूत सुविधा विकास" loading="lazy">
+                <div class="card-overlay">
+                  <h4>पायाभूत सुविधा विकास</h4>
+                  <p>ग्रामीण कनेक्टिव्हिटीचा निर्माण</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- संग्रह 4 -->
+            <div class="photo-container">
+              <div class="photo-card">
+                <img src="images/image4.webp" alt="आरोग्य सेवा" loading="lazy">
+                <div class="card-overlay">
+                  <h4>आरोग्य सेवा</h4>
+                  <p>गुणवत्तापूर्ण आरोग्य प्रवेश</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- संग्रह 5 -->
+            <div class="photo-container">
+              <div class="photo-card">
+                <img src="images/image5.webp" alt="शिक्षण आणि प्रशिक्षण" loading="lazy">
+                <div class="card-overlay">
+                  <h4>शिक्षण आणि प्रशिक्षण</h4>
+                  <p>कौशल्य विकास कार्यक्रम</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-footer">
+        <button class="view-all-btn">
+          <span>सर्व छायाचित्रे पहा</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- ⚡ अत्यंत जलद गडद पायघाणा - सेफोरा शैली ⚡ -->
+  <footer class="modern-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-columns">
+
+          <!-- स्तंभ 1: ग्रामपंचायत बद्दल -->
+          <div class="footer-column">
+            <h3 class="footer-heading">ग्रामपंचायत विषयी</h3>
+            <ul class="footer-list">
+              <li><a href="#">ग्रामपंचायत परिचय</a></li>
+              <li><a href="#">संपर्क</a></li>
+              <li><a href="#">ग्रामसभा माहिती</a></li>
+              <li><a href="#">महत्वाचे निर्णय</a></li>
+              <li><a href="#">सदस्यांची यादी</a></li>
+            </ul>
+          </div>
+
+          <!-- स्तंभ 2: योजना आणि सेवा -->
+          <div class="footer-column">
+            <h3 class="footer-heading">योजना व सेवा</h3>
+            <ul class="footer-list">
+              <li><a href="#">प्रधानमंत्री आवास योजना</a></li>
+              <li><a href="#">स्वच्छ भारत अभियान</a></li>
+              <li><a href="#">कृषी पंप योजना</a></li>
+              <li><a href="#">पाणीपुरवठा योजना</a></li>
+              <li><a href="#">इतर योजना</a></li>
+            </ul>
+          </div>
+
+          <!-- स्तंभ 3: डाउनलोड आणि फॉर्म -->
+          <div class="footer-column">
+            <h3 class="footer-heading">डाउनलोड्स</h3>
+            <ul class="footer-list">
+              <li><a href="#">महत्वाचे दस्तावेज</a></li>
+              <li><a href="#">फॉर्म्स</a></li>
+              <li><a href="#">परिपत्रके</a></li>
+              <li><a href="#">अहवाल</a></li>
+            </ul>
+          </div>
+
+          <!-- स्तंभ 4: संपर्क आणि सामाजिक -->
+          <div class="footer-column">
+            <h3 class="footer-heading">संपर्क व सोशल</h3>
+            <ul class="footer-list">
+              <li><a href="#">फोन: ०१२३४-५६७८९०</a></li>
+              <li><a href="#">ईमेल: grampanchayat@email.com</a></li>
+              <li><a href="#">पत्ता: [गाव, तालुका, जिल्हा]</a></li>
+              <li>
+                <a href="#">फेसबुक</a> |
+                <a href="#">यूट्यूब</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </div>
 
-    <!-- सरकारी शीर्षक -->
-    <header class="gov-header" role="banner">
-      <div class="container gov-header-inner">
-        <!-- डावीकडे: सरकारी चिन्ह -->
-        <div class="gov-emblem">
-          <img
-            src="https://panchayat.gov.in/wp-content/themes/sdo-theme/images/emblem.svg"
-            alt="भारत सरकार राष्ट्रीय चिन्ह - सत्यमेव जयते (खरेपणे जिंकते)"
-            class="emblem-img"
-            loading="eager"
-            width="90"
-            height="90"
-            decoding="async"
-            fetchpriority="high"
-          />
-        </div>
-
-        <!-- मध्य: मंत्रालय शीर्षक -->
-        <div class="gov-title">
-          <h1 class="title-hindi">पास्ते ग्रामपंचायत</h1>
-          <h2 class="title-english">गावाचा विकास, नागरिकांचा कल्याण</h2>
-          <p class="title-subtitle">भारत सरकार</p>
-        </div>
-
-        <!-- उजवीकडे: अधिकृत लोगो -->
-        <div
-          class="gov-logos"
-          role="group"
-          aria-label="सरकारी उपक्रम लोगो"
-        >
-          <img
-            src="images/swachbharat.jpg"
-            alt="स्वच्छ भारत मोहिम - स्वच्छ भारत अभियान लोगो"
-            class="logo-img"
-            loading="eager"
-            width="55"
-            height="55"
-            decoding="async"
-            tabindex="0"
-            role="button"
-            aria-describedby="swachh-desc"
-          />
-          <span id="swachh-desc" class="sr-only"
-            >स्वच्छ भारत मोहिम माहितीसाठी दुवा</span
-          >
-          <img
-            src="images/g20indialogo.jpg"
-            alt="G20 भारत 2023 अध्यक्षता लोगो"
-            class="logo-img"
-            loading="eager"
-            width="55"
-            height="55"
-            decoding="async"
-            tabindex="0"
-            role="button"
-            aria-describedby="g20-desc"
-          />
-          <span id="g20-desc" class="sr-only"
-            >G20 भारत अध्यक्षता माहितीसाठी दुवा</span
-          >
-          <img
-            src="images/flagofindia.png"
-            alt="डिजिटल इंडिया उपक्रम लोगो"
-            class="logo-img"
-            loading="eager"
-            width="55"
-            height="55"
-            decoding="async"
-            tabindex="0"
-            role="button"
-            aria-describedby="digital-desc"
-          />
-          <span id="digital-desc" class="sr-only"
-            >डिजिटल इंडिया उपक्रम माहितीसाठी दुवा</span
-          >
-        </div>
-      </div>
-    </header>
-
-    <!-- MOPR नेव्हिगेशन पट्टी -->
-    <nav class="mopr-nav" role="navigation" aria-label="मुख्य नेव्हिगेशन">
-      <div class="nav-inner">
-        <ul class="nav-menu" role="menubar">
-          <li class="nav-item active has-dropdown" role="none">
-            <button
-              class="nav-link dropdown-toggle"
-              role="menuitem"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-current="page"
-            >
-              मुख्यपृष्ठ
-              <span class="dropdown-arrow" aria-hidden="true">▼</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="none"><a href="#" role="menuitem">मुख्यपृष्ठ</a></li>
-              <li role="none"><a href="#" role="menuitem">साइट मॅप</a></li>
-              <li role="none"><a href="#" role="menuitem">जलद दुवे</a></li>
-              <li role="none"><a href="#" role="menuitem">संपर्क साधा</a></li>
-            </ul>
-          </li>
-          <li class="nav-item has-dropdown" role="none">
-            <button
-              class="nav-link dropdown-toggle"
-              role="menuitem"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              वृक्षारोपण
-              <span class="dropdown-arrow" aria-hidden="true">▼</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="none">
-                <a href="TREE-PLANTATION/index.html" role="menuitem">वृक्षारोपण</a>
-              </li>
-              <li role="none">
-                <a href="TREE-PLANTATION/TREE-PLANTATION.html" role="menuitem">वृक्ष लागवड</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-dropdown" role="none">
-            <button
-              class="nav-link dropdown-toggle"
-              role="menuitem"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              मुख्यमंत्री समृद्ध पंचायत अभियान
-              <span class="dropdown-arrow" aria-hidden="true">▼</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="none">
-                <a href="GAONYATRA-IMAGES/Pages/index.html" role="menuitem">पंचायत अभियान छायाचित्रे</a>
-              </li>
-              <li role="none"><a href="#" role="menuitem">अनुदाने</a></li>
-              <li role="none"><a href="#" role="menuitem">लेखापरीक्षण</a></li>
-            </ul>
-          </li>
-          <li class="nav-item has-dropdown" role="none">
-            <button
-              class="nav-link dropdown-toggle"
-              role="menuitem"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-             वयोवृद्ध वर्ग
-              <span class="dropdown-arrow" aria-hidden="true">▼</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="none"><a href="TREE-PLANTATION/OLDAGESCHOOL.html" role="menuitem">वयोवृद्ध वर्ग</a></li>
-              <li role="none"><a href="#" role="menuitem">मार्गदर्शक तत्त्वे</a></li>
-              <li role="none">
-                <a href="#" role="menuitem">अंमलबजावणी</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-dropdown" role="none">
-            <button
-              class="nav-link dropdown-toggle"
-              role="menuitem"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              योजना
-              <span class="dropdown-arrow" aria-hidden="true">▼</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="none"><a href="NAVIGATION/YOJNA/ELECTRIC.html" role="menuitem">विद्युत योजना</a></li>
-              <li role="none"><a href="NAVIGATION/YOJNA/KRUSHIPUMP.html" role="menuitem">कृषी पंप योजना</a></li>
-              <li role="none"><a href="#" role="menuitem">स्वच्छ भारत अभियान</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item has-dropdown" role="none">
-            <button
-              class="nav-link dropdown-toggle"
-              role="menuitem"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              ग्रामपंचायत छायाचित्रे
-              <span class="dropdown-arrow" aria-hidden="true">▼</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="none">
-                <a href="GRAMPANCHAYAT-CHAYACHITRA/ON-BOARDMEETINGS.html" role="menuitem">
-                  सभागृह बैठकांचे छायाचित्र
-                </a>
-              </li>
-              <li role="none">
-                <a href="GRAMPANCHAYAT-CHAYACHITRA/SAMRUDH-MEETING.html" role="menuitem">मुख्यमंत्री समृद्ध पंचायत अभियान</a>
-              </li>
-              <li role="none">
-                <a href="GRAMPANCHAYAT-CHAYACHITRA/FALICITATION.html" role="menuitem">सत्कार समारंभ छायाचित्रे</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item has-dropdown" role="none">
-            <button
-              class="nav-link dropdown-toggle"
-              role="menuitem"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              एसडीजी
-              <span class="dropdown-arrow" aria-hidden="true">▼</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="none">
-                <a href="#" role="menuitem">एसडीजी स्थानिकीकरण</a>
-              </li>
-              <li role="none"><a href="#" role="menuitem">संकेतक</a></li>
-              <li role="none"><a href="#" role="menuitem">अहवाल</a></li>
-            </ul>
-          </li>
-          <li class="nav-item has-dropdown" role="none">
-            <button
-              class="nav-link dropdown-toggle"
-              role="menuitem"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              पीएआय
-              <span class="dropdown-arrow" aria-hidden="true">▼</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="none"><a href="#" role="menuitem">पीएआयबद्दल</a></li>
-              <li role="none"><a href="#" role="menuitem">कार्यक्रम</a></li>
-              <li role="none"><a href="#" role="menuitem">संसाधने</a></li>
-            </ul>
-          </li>
-          <li class="nav-item has-dropdown" role="none">
-            <button
-              class="nav-link dropdown-toggle"
-              role="menuitem"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              स्वामित्व
-              <span class="dropdown-arrow" aria-hidden="true">▼</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="none">
-                <a href="#" role="menuitem">स्वामित्वबद्दल</a>
-              </li>
-              <li role="none">
-                <a href="#" role="menuitem">मालमत्ता कार्ड</a>
-              </li>
-              <li role="none"><a href="#" role="menuitem">जमिनीचे नकाशाकरण</a></li>
-              <li role="none"><a href="#" role="menuitem">मार्गदर्शक तत्त्वे</a></li>
-              <li role="none">
-                <a href="#" role="menuitem">प्रगती अहवाल</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-dropdown" role="none">
-            <button
-              class="nav-link dropdown-toggle"
-              role="menuitem"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              ई-शासन
-              <span class="dropdown-arrow" aria-hidden="true">▼</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="none"><a href="#" role="menuitem">ई-ग्रामस्वराज</a></li>
-              <li role="none"><a href="#" role="menuitem">ऑडिटऑनलाइन</a></li>
-              <li role="none"><a href="#" role="menuitem">पीएफएमएस</a></li>
-            </ul>
-          </li>
-
-        </ul>
-
-        <!-- मोबाइल हॅमबर्गर मेनू -->
-        <button
-          class="mobile-menu-toggle"
-          aria-label="मोबाइल मेनू टॉगल करा"
-          aria-expanded="false"
-        >
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </div>
-    </nav>
-
-    <main id="main" tabindex="-1">
-      <!-- मन की बात इमेज स्लाइडशो -->
-      <section class="hero" aria-label="मन की बात स्लाइडशो" role="region">
-        <div
-          class="mann-ki-baat-slideshow"
-          role="img"
-          aria-live="polite"
-          aria-atomic="false"
-          aria-label="मन की बात स्लाइडशो 5 स्लाइडसह"
-        >
-          <div class="slideshow-container">
-            <!-- स्लाइड 1 - पहिल्या स्लाइडसाठी तात्काळ लोडिंग -->
-            <div
-              class="slide active"
-              data-bg-image="images/image1.jpeg"
-              role="img"
-              aria-label="पंतप्रधान राष्ट्राला संबोधत आहेत - स्लाइड 1 ते 5"
-              aria-hidden="false"
-            >
-              <img
-                src="images/image1.jpeg"
-                alt="पंतप्रधान राष्ट्राला संबोधत आहेत"
-                loading="eager"
-                fetchpriority="high"
-                width="1200"
-                height="600"
-                style="
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  z-index: -1;
-                "
-              />
-            </div>
-
-            <!-- स्लाइड 2 - पुढील स्लाइडसाठी विलंबित लोडिंग -->
-            <div
-              class="slide"
-              data-bg-image="images/image2.jpg"
-              role="img"
-              aria-label="सरकारी उपक्रम आणि कार्यक्रम - स्लाइड 2 ते 5"
-              aria-hidden="true"
-            >
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E"
-                data-src="images/image2.jpg"
-                alt="सरकारी उपक्रम आणि कार्यक्रम"
-                loading="lazy"
-                width="1200"
-                height="600"
-                style="
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  z-index: -1;
-                "
-              />
-            </div>
-
-            <!-- स्लाइड 3 -->
-            <div
-              class="slide"
-              data-bg-image="images/image3.jpg"
-              role="img"
-              aria-label="ग्रामीण विकास आणि शासन - स्लाइड 3 ते 5"
-              aria-hidden="true"
-            >
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E"
-                data-src="images/image3.jpg"
-                alt="ग्रामीण विकास आणि शासन"
-                loading="lazy"
-                width="1200"
-                height="600"
-                style="
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  z-index: -1;
-                "
-              />
-            </div>
-
-            <!-- स्लाइड 4 -->
-            <div
-              class="slide"
-              data-bg-image="images/image4.webp"
-              role="img"
-              aria-label="डिजिटल इंडिया आणि तंत्रज्ञान उपक्रम - स्लाइड 4 ते 5"
-              aria-hidden="true"
-            >
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E"
-                data-src="images/image4.webp"
-                alt="डिजिटल इंडिया आणि तंत्रज्ञान उपक्रम"
-                loading="lazy"
-                width="1200"
-                height="600"
-                style="
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  z-index: -1;
-                "
-              />
-            </div>
-
-            <!-- स्लाइड 5 -->
-            <div
-              class="slide"
-              data-bg-image="images/image5.webp"
-              role="img"
-              aria-label="पंचायती राज आणि स्थानिक शासन - स्लाइड 5 ते 5"
-              aria-hidden="true"
-            >
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E"
-                data-src="images/image5.webp"
-                alt="पंचायती राज आणि स्थानिक शासन"
-                loading="lazy"
-                width="1200"
-                height="600"
-                style="
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  z-index: -1;
-                "
-              />
-            </div>
-          </div>
-
-          <!-- नेव्हिगेशन बाण -->
-          <button
-            class="nav-arrow prev"
-            aria-label="मागील स्लाइडवर जा"
-            id="prevSlide"
-            type="button"
-            aria-describedby="slideshow-help"
-          >
-            <span aria-hidden="true">◀</span>
-            <span class="sr-only">मागील</span>
-          </button>
-          <button
-            class="nav-arrow next"
-            aria-label="पुढील स्लाइडवर जा"
-            id="nextSlide"
-            type="button"
-            aria-describedby="slideshow-help"
-          >
-            <span aria-hidden="true">▶</span>
-            <span class="sr-only">पुढील</span>
-          </button>
-
-          <!-- प्ले/थांब बटण -->
-          <button
-            class="play-pause-btn"
-            aria-label="स्वयंचलित स्लाइडशो थांबवा"
-            id="playPauseBtn"
-            type="button"
-            aria-pressed="false"
-            aria-describedby="slideshow-help"
-          >
-            <span aria-hidden="true">⏸</span>
-            <span class="sr-only">थांबवा</span>
-          </button>
-
-          <!-- स्लाइड संकेतक -->
-          <div
-            class="slide-indicators"
-            role="tablist"
-            aria-label="स्लाइडशो नेव्हिगेशन"
-            aria-describedby="slideshow-help"
-          >
-            <button
-              class="indicator active"
-              data-slide="0"
-              role="tab"
-              aria-selected="true"
-              aria-label="स्लाइड 1 वर जा"
-              tabindex="0"
-            ></button>
-            <button
-              class="indicator"
-              data-slide="1"
-              role="tab"
-              aria-selected="false"
-              aria-label="स्लाइड 2 वर जा"
-              tabindex="-1"
-            ></button>
-            <button
-              class="indicator"
-              data-slide="2"
-              role="tab"
-              aria-selected="false"
-              aria-label="स्लाइड 3 वर जा"
-              tabindex="-1"
-            ></button>
-            <button
-              class="indicator"
-              data-slide="3"
-              role="tab"
-              aria-selected="false"
-              aria-label="स्लाइड 4 वर जा"
-              tabindex="-1"
-            ></button>
-            <button
-              class="indicator"
-              data-slide="4"
-              role="tab"
-              aria-selected="false"
-              aria-label="स्लाइड 5 वर जा"
-              tabindex="-1"
-            ></button>
-          </div>
-
-          <!-- बातम्या टिकर -->
-          <div
-            class="news-ticker-container"
-            role="marquee"
-            aria-label="नवीनतम बातम्या टिकर"
-          >
-            <div class="news-ticker" aria-live="off">
-              <div class="news-ticker-label" aria-hidden="true">
-                नवीनतम बातम्या
-              </div>
-              <div
-                class="news-ticker-content"
-                role="status"
-                aria-label="नवीनतम बातम्या: 31 ऑगस्ट 2025 रोजी सकाळी 11:00 वाजता पंतप्रधान मन की बातमध्ये राष्ट्राला संबोधतील"
-              >
-                31 ऑगस्ट 2025 रोजी सकाळी 11:00 वाजता पंतप्रधान मन की बातमध्ये राष्ट्राला संबोधतील • ग्रामीण विकासासाठी नवीन उपक्रम घोषित • डिजिटल इंडिया प्रगती अद्यतन • स्वच्छ भारत मोहिम यशस्वी • G20 भारत अध्यक्षता ठळक मुद्दे • पंचायती राज सुदृढीकरण उपाययोजना
-              </div>
-            </div>
-          </div>
-
-          <!-- स्क्रीन वाचकांसाठी लपविलेला मदतीचा मजकूर -->
-          <div id="slideshow-help" class="sr-only">
-            स्लाइडस नेव्हिगेट करण्यासाठी बाण की वापरा, स्पेसबारने प्ले/थांबवा, किंवा खालील संकेतकांवर क्लिक करून विशिष्ट स्लाइडवर जा.
-          </div>
-        </div>
-      </section>
-
-      <!-- MOPR-शैली मुख्य सामग्री मांडणी -->
-      <section class="container section section-white">
-        <div class="mopr-content-layout">
-          <!-- डावी स्तंभ: MOPR बद्दल -->
-          <article class="mopr-main-content" aria-labelledby="about-gp-title">
-            <header class="mopr-content-header">
-              <h2 id="about-gp-title">आपल्या ग्रामपंचायती विषयी</h2>
-            </header>
-            <div class="mopr-content-body">
-              <p>
-                आपल्या ग्रामपंचायत ही गावातील स्थानिक स्वराज्य संस्था असून ती नागरिकांच्या 
-                दैनंदिन गरजा, विकास योजना आणि सामाजिक उपक्रमांची अंमलबजावणी करते. 
-                ग्रामपंचायत ही गावाच्या प्रगतीसाठी एक महत्त्वाची कडी आहे आणि ती 
-                लोकशाही पद्धतीने निवडून आलेल्या सदस्यांद्वारे कार्य करते.
-              </p>
-              <p>
-                आमची ग्रामपंचायत गावातील पायाभूत सुविधा, शिक्षण, आरोग्य, पाणीपुरवठा, 
-                स्वच्छता आणि ग्रामविकास कार्यक्रम राबवते. याशिवाय नागरिकांना 
-                शासनाच्या विविध योजना, अनुदाने व सुविधा सहज उपलब्ध करून देण्याचे 
-                कामही ग्रामपंचायत करते.
-              </p>
-              <p>
-                ग्रामसभेच्या माध्यमातून प्रत्येक नागरिकाला निर्णय प्रक्रियेत 
-                सहभागी होण्याची संधी दिली जाते. ग्रामपंचायत पारदर्शकता, उत्तरदायित्व 
-                आणि सामूहिक विकास यावर भर देते.
-              </p>
-
-              <h3>मुख्य जबाबदाऱ्या</h3>
-              <ul class="gp-function-list">
-                <li>गावातील पायाभूत सुविधा विकास (रस्ते, पाणी, वीज इ.)</li>
-                <li>आरोग्य व स्वच्छता अभियानांची अंमलबजावणी</li>
-                <li>शिक्षण व प्रशिक्षण उपक्रम</li>
-                <li>शासनाच्या विविध योजना नागरिकांपर्यंत पोहोचवणे</li>
-                <li>ग्रामसभेच्या माध्यमातून निर्णय प्रक्रिया</li>
-                <li>सामाजिक उपक्रम व सांस्कृतिक कार्यक्रमांना प्रोत्साहन</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- उजवी स्तंभ: महत्त्वाचे दस्तावेज -->
-          <aside class="mopr-sidebar" aria-labelledby="sidebar-documents-title">
-            <div class="mopr-sidebar-section">
-              <header class="mopr-sidebar-header">
-                <h2 id="sidebar-documents-title" style="color: #fff;">महत्वपूर्ण दस्तावेज</h2>
-              </header>
-              <ul class="mopr-documents-list" role="list">
-                <li class="mopr-document-item">
-                  <a href="PDF'S/202508061325445120.pdf" target="_blank" class="mopr-document-link">
-                    <div class="document-icon">📄</div>
-                    <div class="document-info">
-                      <span class="mopr-document-title">एसडीजी-सुसंगत ग्रामीण विकासासाठी महाराष्ट्र शासन निर्णय (२०१५)</span>
-                      <span class="mopr-document-meta">PDF • सरकारी दस्तावेज</span>
-                    </div>
-                    <div class="document-actions">
-                      <span class="view-icon">👁️</span>
-                    </div>
-                  </a>
-                </li>
-                <li class="mopr-document-item">
-                  <a href="PDF'S/MSPRA TRAINING MODULE FOR STATE 28 AUG 2025.pdf" target="_blank" class="mopr-document-link">
-                    <div class="document-icon">📋</div>
-                    <div class="document-info">
-                      <span class="mopr-document-title">मुख्यमंत्री समृद्ध पंचायत अभियान व पंचायती राज प्रणालीतील SDG स्थानिकीकरण (२०२५)</span>
-                      <span class="mopr-document-meta">PDF • प्रशिक्षण मॉड्यूल</span>
-                    </div>
-                    <div class="document-actions">
-                      <span class="view-icon">👁️</span>
-                    </div>
-                  </a>
-                </li>
-                <li class="mopr-document-item">
-                  <a href="PDF'S/2 MSPRA LOKSAHBHAG  30 AUG 2025.pdf" target="_blank" class="mopr-document-link">
-                    <div class="document-icon">🤝</div>
-                    <div class="document-info">
-                      <span class="mopr-document-title">मुख्यमंत्री समृद्ध पंचायत राज अभियान : पारस्परिक शिक्षण व ज्ञानविनिमयावर आधारित ग्रामपंचायतींचे सक्षमीकरण</span>
-                      <span class="mopr-document-meta">PDF • लोकसहभाग</span>
-                    </div>
-                    <div class="document-actions">
-                      <span class="view-icon">👁️</span>
-                    </div>
-                  </a>
-                </li>
-                <li class="mopr-document-item">
-                  <a href="PDF'S/1 MSPRA SCHEME CONTENT 30 AUG 2025.pdf" target="_blank" class="mopr-document-link">
-                    <div class="document-icon">⭐</div>
-                    <div class="document-info">
-                      <span class="mopr-document-title">मुख्यमंत्री समृद्ध ग्राम पंचायत राज अभियानाचे मूल्यांकन घटक व गुण प्रणाली</span>
-                      <span class="mopr-document-meta">PDF • योजना सामग्री</span>
-                    </div>
-                    <div class="document-actions">
-                      <span class="view-icon">👁️</span>
-                    </div>
-                  </a>
-                </li>
-                <li class="mopr-document-item">
-                  <a href="PDF'S/3 MSPRA IEC  30 AUG 2025.pdf" target="_blank" class="mopr-document-link">
-                    <div class="document-icon">📊</div>
-                    <div class="document-info">
-                      <span class="mopr-document-title">मुख्यमंत्री समृद्ध ग्राम पंचायत अभियानासाठी मूल्यांकन निकष व गुणांकन प्रणालीचे तपशील</span>
-                      <span class="mopr-document-meta">PDF • IEC सामग्री</span>
-                    </div>
-                    <div class="document-actions">
-                      <span class="view-icon">👁️</span>
-                    </div>
-                  </a>
-                </li>
-                <!-- नवीन दस्तावेज आयटम खाली जोडलेला आहे -->
-                <li class="mopr-document-item">
-                  <a href="PDF'S/yearly_expense.pdf" target="_blank" class="mopr-document-link">
-                    <div class="document-icon">📑</div>
-                    <div class="document-info">
-                      <span class="mopr-document-title">वार्षिक/मासिक लेखा सादरीकरणाबाबत शासन आदेश</span>
-                      <span class="mopr-document-meta">PDF • लेखा आदेश</span>
-                    </div>
-                    <div class="document-actions">
-                      <span class="view-icon">👁️</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-              <div class="mopr-sidebar-footer">
-                <a href="#" class="mopr-view-all-link">सर्व दस्तावेज पहा →</a>
-              </div>
-            </div>
-
-            
-          </aside>
-        </div>
-      </section>
-
-      <!-- महत्त्वाच्या सेवा -->
-      <section class="section-featured" aria-labelledby="services-title">
-        <div class="container">
-          <header>
-            <h2 id="services-title">योजना आणि महत्त्वाच्या सेवा</h2>
-            <p class="muted">
-              ग्रामीण विकास आणि पंचायती राज सुदृढीकरणासाठी सरकारी उपक्रम
-            </p>
-          </header>
-        <div class="grid">
-          <a
-            class="service"
-            href="#"
-            aria-label="आरजीएसए - राष्ट्रीय ग्राम स्वराज अभियान"
-            ><h3>आरजीएसए</h3>
-            <p>
-              राष्ट्रीय ग्राम स्वराज अभियान - सर्वत्र पंचायती राज संस्था सुदृढ करणे
-            </p></a
-          >
-          <a class="service" href="#" aria-label="स्वामित्व योजना"
-            ><h3>स्वामित्व</h3>
-            <p>
-              गावांचे सर्वेक्षण आणि उन्नत तंत्रज्ञानासह नकाशाकरण - ग्रामीण क्षेत्रांसाठी मालमत्ता कार्ड
-            </p></a
-          >
-          <a class="service" href="#" aria-label="ई-ग्रामस्वराज पोर्टल"
-            ><h3>ई-ग्रामस्वराज</h3>
-            <p>
-              ग्रामपंचायत योजनाकरण, लेखापरीक्षण आणि नियंत्रण कार्यक्रमांसाठी डिजिटल प्लॅटफॉर्म
-            </p></a
-          >
-          <a class="service" href="#" aria-label="ऑडिटऑनलाइन प्लॅटफॉर्म"
-            ><h3>ऑडिटऑनलाइन</h3>
-            <p>
-              पंचायत शासनात पारदर्शकता सुनिश्चित करणारे ऑनलाइन सामाजिक लेखापरीक्षण प्लॅटफॉर्म
-            </p></a
-          >
-          <a class="service" href="#" aria-label="पंचायत पुरस्कार"
-            ><h3>राष्ट्रीय पंचायत पुरस्कार</h3>
-            <p>
-              राष्ट्रीय गौरव ग्राम सभा पुरस्कार आणि इतर उत्कृष्टता ओळख प्रोग्राम
-            </p></a
-          >
-          <a class="service" href="#" aria-label="पेशा अंमलबजावणी"
-            ><h3>पेशा</h3>
-            <p>
-              अनुसूचित क्षेत्रांसाठी पंचायतींचा विस्तार - आदिवासी स्व-शासन सक्षम करणे
-            </p></a
-          >
-          <a class="service" href="#" aria-label="एसडीजी स्थानिकीकरण"
-            ><h3>एसडीजी स्थानिकीकरण</h3>
-            <p>
-              पंचायत स्तरावर स्थायी विकास लक्ष्यांची अंमलबजावणी आणि नियंत्रण
-            </p></a
-          >
-          <a class="service" href="#" aria-label="क्षमता निर्माण कार्यक्रम"
-            ><h3>प्रशिक्षण आणि क्षमता निर्माण</h3>
-            <p>
-              निवडक प्रतिनिधी आणि पंचायत कार्यकर्त्यांसाठी कौशल्य विकास कार्यक्रम
-            </p></a
-          >
-        </div>
-        </div>
-      </section>
-
-      
-      <!-- छायाचित्र संग्रह -->
-      <section class="container section section-light photo-gallery-section" aria-labelledby="photos-title" style="margin-top: 4rem;">
-        <header class="gallery-header">
-          <h2 id="photos-title">छायाचित्र संग्रह</h2>
-          <p>ग्रामीण विकास उपक्रम आणि पंचायत कार्यक्रमांचे क्षण साठवले</p>
-        </header>
-        
-        <div class="gallery-container">
-          <!-- 3 संग्रह फिरत असलेले गॅलरी -->
-          <div class="rotating-gallery-wrapper">
-            <div class="rotating-track" id="rotatingTrack">
-              <!-- संग्रह 1 -->
-              <div class="photo-container">
-                <div class="photo-card">
-                  <img src="images/image1.jpeg" alt="ग्रामीण विकास उपक्रम" loading="lazy">
-                  <div class="card-overlay">
-                    <h4>ग्रामीण विकास</h4>
-                    <p>समुदाय सक्षमीकरण कार्यक्रम</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- संग्रह 2 -->
-              <div class="photo-container">
-                <div class="photo-card">
-                  <img src="images/image2.jpg" alt="समुदाय सहभाग" loading="lazy">
-                  <div class="card-overlay">
-                    <h4>समुदाय सहभाग</h4>
-                    <p>लोकशाही सहभाग उपक्रम</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- संग्रह 3 -->
-              <div class="photo-container">
-                <div class="photo-card">
-                  <img src="images/image3.jpg" alt="पायाभूत सुविधा विकास" loading="lazy">
-                  <div class="card-overlay">
-                    <h4>पायाभूत सुविधा विकास</h4>
-                    <p>ग्रामीण कनेक्टिव्हिटीचा निर्माण</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- संग्रह 4 -->
-              <div class="photo-container">
-                <div class="photo-card">
-                  <img src="images/image4.webp" alt="आरोग्य सेवा" loading="lazy">
-                  <div class="card-overlay">
-                    <h4>आरोग्य सेवा</h4>
-                    <p>गुणवत्तापूर्ण आरोग्य प्रवेश</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- संग्रह 5 -->
-              <div class="photo-container">
-                <div class="photo-card">
-                  <img src="images/image5.webp" alt="शिक्षण आणि प्रशिक्षण" loading="lazy">
-                  <div class="card-overlay">
-                    <h4>शिक्षण आणि प्रशिक्षण</h4>
-                    <p>कौशल्य विकास कार्यक्रम</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="gallery-footer">
-          <button class="view-all-btn">
-            <span>सर्व छायाचित्रे पहा</span>
-            <span class="btn-arrow">→</span>
-          </button>
-        </div>
-      </section>
-
-     
-    </main>
-
-    <!-- ⚡ अत्यंत जलद गडद पायघाणा - सेफोरा शैली ⚡ -->
-    <footer class="modern-footer">
-      <div class="footer-main">
-        <div class="container">
-          <div class="footer-columns">
-
-            <!-- स्तंभ 1: ग्रामपंचायत बद्दल -->
-            <div class="footer-column">
-              <h3 class="footer-heading">ग्रामपंचायत विषयी</h3>
-              <ul class="footer-list">
-                <li><a href="#">ग्रामपंचायत परिचय</a></li>
-                <li><a href="#">संपर्क</a></li>
-                <li><a href="#">ग्रामसभा माहिती</a></li>
-                <li><a href="#">महत्वाचे निर्णय</a></li>
-                <li><a href="#">सदस्यांची यादी</a></li>
-              </ul>
-            </div>
-
-            <!-- स्तंभ 2: योजना आणि सेवा -->
-            <div class="footer-column">
-              <h3 class="footer-heading">योजना व सेवा</h3>
-              <ul class="footer-list">
-                <li><a href="#">प्रधानमंत्री आवास योजना</a></li>
-                <li><a href="#">स्वच्छ भारत अभियान</a></li>
-                <li><a href="#">कृषी पंप योजना</a></li>
-                <li><a href="#">पाणीपुरवठा योजना</a></li>
-                <li><a href="#">इतर योजना</a></li>
-              </ul>
-            </div>
-
-            <!-- स्तंभ 3: डाउनलोड आणि फॉर्म -->
-            <div class="footer-column">
-              <h3 class="footer-heading">डाउनलोड्स</h3>
-              <ul class="footer-list">
-                <li><a href="#">महत्वाचे दस्तावेज</a></li>
-                <li><a href="#">फॉर्म्स</a></li>
-                <li><a href="#">परिपत्रके</a></li>
-                <li><a href="#">अहवाल</a></li>
-              </ul>
-            </div>
-
-            <!-- स्तंभ 4: संपर्क आणि सामाजिक -->
-            <div class="footer-column">
-              <h3 class="footer-heading">संपर्क व सोशल</h3>
-              <ul class="footer-list">
-                <li><a href="#">फोन: ०१२३४-५६७८९०</a></li>
-                <li><a href="#">ईमेल: grampanchayat@email.com</a></li>
-                <li><a href="#">पत्ता: [गाव, तालुका, जिल्हा]</a></li>
-                <li>
-                  <a href="#">फेसबुक</a> |
-                  <a href="#">यूट्यूब</a>
-                </li>
-              </ul>
-            </div>
-
+    <!-- पायघाणा तळाशी विभाग -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <p>© <span id="yr"></span> [आपल्या ग्रामपंचायतीचे नाव]. सर्व हक्क राखीव.</p>
+          <div class="footer-policies">
+            <a href="#">गोपनीयता धोरण</a>
+            <a href="#">वापराच्या अटी</a>
+            <a href="#">प्रवेशता</a>
           </div>
         </div>
       </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
 
-      <!-- पायघाणा तळाशी विभाग -->
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="footer-bottom-content">
-            <p>© <span id="yr"></span> [आपल्या ग्रामपंचायतीचे नाव]. सर्व हक्क राखीव.</p>
-            <div class="footer-policies">
-              <a href="#">गोपनीयता धोरण</a>
-              <a href="#">वापराच्या अटी</a>
-              <a href="#">प्रवेशता</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-<script src="script.js"></script>
-  </body>
 </html>

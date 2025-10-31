@@ -1,3 +1,40 @@
+// navbar
+const mobileNav = document.querySelector(".hamburger");
+const navbar = document.querySelector(".menubar");
+
+// Toggle the nav menu
+const toggleNav = () => {
+  navbar.classList.toggle("active");
+  mobileNav.classList.toggle("hamburger-active");
+};
+
+// Toggle when clicking hamburger icon
+mobileNav.addEventListener("click", (e) => {
+  e.stopPropagation(); // prevent click from bubbling to document
+  toggleNav();
+});
+
+// ✅ Close menu when clicking outside of it
+document.addEventListener("click", (e) => {
+  if (
+    navbar.classList.contains("active") &&   // menu is open
+    !navbar.contains(e.target) &&            // click NOT inside menu
+    !mobileNav.contains(e.target)            // click NOT on hamburger
+  ) {
+    navbar.classList.remove("active");
+    mobileNav.classList.remove("hamburger-active");
+  }
+});
+
+// ✅ Close menu when clicking any link inside the menu
+navbar.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    mobileNav.classList.remove("hamburger-active");
+  });
+});
+
+
 // small enhancement — update year automatically
 document.getElementById("yr").textContent = new Date().getFullYear();
 
