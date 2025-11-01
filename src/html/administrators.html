@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="mr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,7 +48,8 @@
       display: flex;
       gap: 2rem;
       justify-content: flex-end;
-      list-style: none; /* Not needed if using <nav>, but safe to include */
+      list-style: none;
+      /* Not needed if using <nav>, but safe to include */
     }
 
     .nav-links a {
@@ -84,7 +86,8 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      max-width: 1000px; /* Center grid slightly */
+      max-width: 1000px;
+      /* Center grid slightly */
       margin: 0 auto;
     }
 
@@ -95,11 +98,13 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
       transition: transform 0.3s ease;
-      min-height: 300px; /* Prevent card height issues */
+      min-height: 300px;
+      /* Prevent card height issues */
     }
 
     .admin-card:hover {
-      transform: translateY(-5px); /* Slight lift on hover */
+      transform: translateY(-5px);
+      /* Slight lift on hover */
     }
 
     .admin-card img {
@@ -108,7 +113,7 @@
       border-radius: 20px;
       object-fit: cover;
       margin-bottom: 1.5rem;
-      margin-left: 110px;
+      margin-left: 40px;
     }
 
     .admin-card h2 {
@@ -152,7 +157,8 @@
 
       .nav-links {
         gap: 1rem;
-        justify-content: center; /* Center nav links on smaller screens */
+        justify-content: center;
+        /* Center nav links on smaller screens */
       }
 
       .section-title {
@@ -161,10 +167,11 @@
 
       .admins-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        padding: 0 1rem; /* Add side padding for grid */
+        padding: 0 1rem;
+        /* Add side padding for grid */
       }
 
-      
+
 
       .admin-card img {
         width: 250px;
@@ -190,7 +197,8 @@
       }
 
       .nav-links {
-        flex-direction: column; /* Stack nav links vertically */
+        flex-direction: column;
+        /* Stack nav links vertically */
         gap: 0.5rem;
         align-items: center;
       }
@@ -200,7 +208,8 @@
       }
 
       .admins-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
       }
 
       .admin-card {
@@ -233,8 +242,9 @@
     }
   </style>
 </head>
-<body> 
-    <header class="gov-header" role="banner">
+
+<body>
+  <header class="gov-header" role="banner">
     <div class="container gov-header-inner">
       <!-- डावीकडे: सरकारी चिन्ह -->
       <div class="gov-emblem">
@@ -259,80 +269,87 @@
         <img src="./../../images/g20indialogo.jpg" alt="G20 भारत 2023 अध्यक्षता लोगो" class="logo-img" loading="eager"
           width="55" height="55" decoding="async" tabindex="0" role="button" aria-describedby="g20-desc" />
         <span id="g20-desc" class="sr-only">G20 भारत अध्यक्षता माहितीसाठी दुवा</span>
-        <img src="./../../images/flagofindia.png" alt="डिजिटल इंडिया उपक्रम लोगो" class="logo-img" loading="eager" width="55"
-          height="55" decoding="async" tabindex="0" role="button" aria-describedby="digital-desc" />
+        <img src="./../../images/flagofindia.png" alt="डिजिटल इंडिया उपक्रम लोगो" class="logo-img" loading="eager"
+          width="55" height="55" decoding="async" tabindex="0" role="button" aria-describedby="digital-desc" />
         <span id="digital-desc" class="sr-only">डिजिटल इंडिया उपक्रम माहितीसाठी दुवा</span>
       </div>
     </div>
   </header>
 
   <nav id="navbar">
-      <ul>
-        <li>
-          <a href="../../index.html">मुखपृष्ठ</a>
-        </li>
-        <li>
-          <a href="./administrators.html">पदाधिकारी</a>
-        </li>
-        <li>
-          <a href="./villageInfo.html">गावाबद्दल माहिती</a>
-        </li>
-        <li>
-          <a href="./pradhanmantri.html">शासकीय योजना</a>
-        </li>
-        <li>
-          <a href="./seva.html">नागरिकांसाठी सेवा</a>
-        </li>
-        <li>
-          <a href="./vard.html">वार्ड माहिती</a>
-        </li>
-      </ul>
-      <div class="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </div>
-    </nav>
-    <div class="menubar">
-      <ul>
-        <li>
-          <a href="../../index.html">मुखपृष्ठ</a>
-        </li>
-        <li>
-          <a href="./administrators.html">पदाधिकारी</a>
-        </li>
-        <li>
-          <a href="./villageInfo.html">गावाबद्दल माहिती</a>
-        </li>
-        <li>
-          <a href="./pradhanmantri.html">शासकीय योजना</a>
-        </li>
-        <li>
-          <a href="./seva.html">नागरिकांसाठी सेवा</a>
-        </li>
-        <li>
-          <a href="./vard.html">वार्ड माहिती</a>
-        </li>
-      </ul>
+    <ul>
+      <li>
+        <a href="../../index.html">मुखपृष्ठ</a>
+      </li>
+      <li>
+        <a href="./administrators.html">पदाधिकारी</a>
+      </li>
+      <li>
+        <a href="./villageInfo.html">गावाबद्दल माहिती</a>
+      </li>
+      <li>
+        <a href="./pradhanmantri.html">शासकीय योजना</a>
+      </li>
+      <li>
+        <a href="./seva.html">नागरिकांसाठी सेवा</a>
+      </li>
+      <li>
+        <a href="./vard.html">वार्ड माहिती</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
     </div>
+  </nav>
+  <div class="menubar">
+    <ul>
+      <li>
+        <a href="../../index.html">मुखपृष्ठ</a>
+      </li>
+      <li>
+        <a href="./administrators.html">पदाधिकारी</a>
+      </li>
+      <li>
+        <a href="./villageInfo.html">गावाबद्दल माहिती</a>
+      </li>
+      <li>
+        <a href="./pradhanmantri.html">शासकीय योजना</a>
+      </li>
+      <li>
+        <a href="./seva.html">नागरिकांसाठी सेवा</a>
+      </li>
+      <li>
+        <a href="./vard.html">वार्ड माहिती</a>
+      </li>
+    </ul>
+  </div>
   <main class="admins-section">
     <div class="container">
       <h1 class="section-title">ग्रामपंचायत पदाधिकारी</h1>
       <div class="admins-grid">
+        <div class="admin-card">
+          <img src="../../images/adhikari/sarpanch.jpeg" alt="" />
+          <h2>सौ.स्नेहल शरद आव्हाड</h2>
+          <p class="role">सरपंच </p>
+          <!-- <p class="contact">📞 9876543210</p> -->
+        </div>
         <div class="admin-card">
           <img src="../../images/adhikari/fuke-sir.jpeg" alt="" />
           <h2>श्री.अशोक पोपट फुके</h2>
           <p class="role">ग्रामपंचायत अधिकारी </p>
           <!-- <p class="contact">📞 9876543210</p> -->
         </div>
+
         <div class="admin-card">
           <img src="../../images/adhikari/nana.png" alt="" />
           <h2>श्री.वसंत नाना आव्हाड</h2>
           <p class="role">सदस्य</p>
           <!-- <p class="contact">📞 8765432109</p> -->
         </div>
-        </div>
       </div>
+    </div>
     </div>
   </main>
 
@@ -341,4 +358,5 @@
   </footer>
   <script src="../../script.js"></script>
 </body>
+
 </html>
